@@ -18,7 +18,7 @@
     <script src="{{asset('js/assets/vendor/swiper/swiper-bundle.min.js')}}" defer></script>
 
     <!-- Template Main JS File -->
-    <script src="{{asset('js/assets/js/main.js')}}"></script>
+    <script src="{{asset('js/assets/main.js')}}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -35,6 +35,7 @@
     <link href="{{asset('css/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
     <link href="{{asset('css/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{asset('css/assets/style.css')}}"rel="stylesheet">
 </head>
 <body>
     <div id="app">
