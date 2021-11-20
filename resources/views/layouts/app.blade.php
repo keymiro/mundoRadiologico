@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
     <script src="{{asset('js/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}" defer></script>
     <script src="{{ asset('js/assets/vendor/glightbox/js/glightbox.min.js') }}" defer></script>
     <script src="{{ asset('js/assets/vendor/php-email-form/validate.js') }}" defer></script>
@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <link href="{{asset('css/assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
@@ -34,8 +34,8 @@
     <link href="{{asset('css/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
     <link href="{{asset('css/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{asset('css/assets/style.css')}}"rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
