@@ -31,6 +31,10 @@ class CreateImagesTable extends Migration
      */
     public function down()
     {
+Schema::table('information', function (Blueprint $table) {
+$table->dropForeign('information_IdImage');
+$table->dropColumn('IdImage');
+});
         Schema::dropIfExists('images');
     }
 }
