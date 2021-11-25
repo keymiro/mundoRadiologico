@@ -32,7 +32,7 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#home">Inicio2021</a></li>
+          <li><a class="nav-link scrollto active" href="#home">Inicio</a></li>
           <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
           <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
           <li><a class="nav-link scrollto" href="#departments">Área</a></li>
