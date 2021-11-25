@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\informationController;
+use App\Http\Controllers\WelcomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +16,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('index');
+Route::get('/',[WelcomeController::class,'welcome'])->name('index');
+Auth::routes(['register' => false]);
+Route::get('/Seccion/listado',[informationController::class,'index'])->name('info.home');
+Route::get('/Seccion/crear',[informationController::class,'create'])->name('info.create');
+Route::post('/Seccion/guardar',[informationController::class,'store'])->name('info.store');
+Route::get('/Seccion/editar/{id}',[informationController::class,'edit'])->name('info.edit');
+Route::patch('/Seccion/editar/{id}',[informationController::class,'update'])->name('info.update');
+Route::delete('/Seccion/eliminar/{id}',[informationController::class,'delete'])->name('info.delete');
+Route::post('Seccion/subirImagen',[informationController::class,'upload'])->name('upload');
 
-Auth::routes();
+Route::get('/Categoria/listado',[informationController::class,'indexCategory'])->name('info.indexCategory');
+Route::get('/Categoria/crear',[informationController::class,'createCategory'])->name('info.createCategory');
+Route::get('/Categoria/editar/{id}',[informationController::class,'editCategory'])->name('info.editCategory');
+Route::post('/Categoria/guardar',[informationController::class,'storeCategory'])->name('info.storeCategory');
+Route::patch('/Categoria/actualizar/{id}',[informationController::class,'updateCategory'])->name('info.updateCategory');
+Route::delete('/Categoria/eliminar/{id}',[informationController::class,'deleteCategory'])->name('info.deleteCategory');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
