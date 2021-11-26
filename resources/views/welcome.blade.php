@@ -20,12 +20,12 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="{{route('index')}}">
-        @foreach ($info as $i)
+      <h1 class="logo me-auto">
+        {{-- @foreach ($info as $i)
             @if($i->category->title=='logo')
-                <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid" style="width:200%"></a>
+            <a href="{{route('index')}}"> <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid" style="width:200%"></a>
             @endif
-        @endforeach
+        @endforeach --}}
     </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
