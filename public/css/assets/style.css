@@ -425,6 +425,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0 0 0;
   font-size: 24px;
 }
+
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -444,16 +445,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 1024px) {
   #hero {
+
+    margin-bottom: -100px;
+    height: 100vh;
+    padding: 0px 0;
+    overflow: hidden;
     background-attachment: fixed;
   }
 }
 @media (max-width: 992px) {
   #hero {
-    margin-bottom: 0;
-    height: 100vh;
+
+
+    overflow: hidden;
+    margin-bottom: -10 !important;
+    height: 110vh !important;
   }
   #hero .container {
-    padding-bottom: 63px;
+    padding-bottom: 0px;
   }
   #hero h1 {
     font-size: 28px;
@@ -467,15 +476,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-height: 600px) {
   #hero {
-    height: 110vh;
+    height: 90vh;
   }
+  section {
+    padding: 0px 0;
+    overflow: hidden;
+}
 }
 
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 0px 0;
   overflow: hidden;
 }
 

@@ -6,7 +6,7 @@
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope"></i> <a href="mailto: gerencia@mundoradiologico.com">gerencia@mundoradiologico.com</a>
-        <i class="bi bi-phone"></i>  Móvil: 322 400 5120  (8) 633 3216
+        {{-- <i class="bi bi-phone"></i> Tel (8) 633 3216 --}}
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
         <a href="{{route('login')}}">Ingresar</a>
@@ -21,11 +21,11 @@
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto">
-        {{-- @foreach ($info as $i)
+        @foreach ($info as $i)
             @if($i->category->title=='logo')
             <a href="{{route('index')}}"> <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid" style="width:200%"></a>
             @endif
-        @endforeach --}}
+        @endforeach
     </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -62,45 +62,48 @@
     </div>
   </header><!-- End Header -->
 
+  {{-- style="margin-bottom:-100px;width: 100%;height: 70vh;" --}}
   <!-- ======= Hero Section ======= -->
-<section style="margin-bottom:-100px;width: 100%;height: 70vh;" id="home">
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<section id="hero" class="d-flex align-items-center" >
+    <div class="container">
+        <div id="carouselExampleDark" class="carousel carousel-dark  carousel-fade slide " data-bs-ride="carousel">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="https://image.shutterstock.com/image-photo/doctor-man-stethoscope-hospital-260nw-555894940.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-white">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://image.shutterstock.com/image-photo/medicine-doctor-hand-working-modern-260nw-190781564.jpg" class="d-block  w-100 " alt="...">
+                <div class="carousel-caption d-none d-md-block text-white">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://thumbs.dreamstime.com/b/portada-del-servicio-de-la-medicina-y-de-la-atenci%C3%B3n-sanitaria-para-el-sitio-web-de-aterrizaje-de-la-p%C3%A1gina-77592968.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-white">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
         </div>
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="https://image.shutterstock.com/image-photo/doctor-man-stethoscope-hospital-260nw-555894940.jpg" class="d-block  img-fluid w-100" alt="..." >
-            <div class="carousel-caption d-none d-md-block text-white">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="https://image.shutterstock.com/image-photo/doctor-man-stethoscope-hospital-260nw-555894940.jpg" class="d-block img-fluid w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block text-white">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://image.shutterstock.com/image-photo/doctor-man-stethoscope-hospital-260nw-555894940.jpg" class="d-block  img-fluid w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block text-white">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+    </div>
 </section>
     {{-- <div class="container">
       <h1>Welcome to Medilab</h1>
