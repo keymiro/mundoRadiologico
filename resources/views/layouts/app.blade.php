@@ -79,7 +79,7 @@
             </div>
         </nav>
 
-        <main class="py-4 bg-secondary min-h-screen">
+        <main class="py-4 bg-secondary" style="min-height: 100vh;">
 
             <div>
                 @if(session('notification'))
