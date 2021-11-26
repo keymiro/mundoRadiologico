@@ -64,7 +64,7 @@
 
   {{-- style="margin-bottom:-100px;width: 100%;height: 70vh;" --}}
   <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center" >
+<section id="hero" class="d-flex align-items-center" style="padding: 0px;">
     <div class="container">
         <div id="carouselExampleDark" class="carousel carousel-dark  carousel-fade slide " data-bs-ride="carousel">
             <div class="carousel-indicators">
