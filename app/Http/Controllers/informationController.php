@@ -24,7 +24,7 @@ class informationController extends Controller
         return view('info.create')->with(compact('categories'));
     }
     public function store(Request $request){
-        $url= '';
+        
         if (!empty($request->hasFile('file'))) {
             $url= $request->file('file')->store('public/section');
         }

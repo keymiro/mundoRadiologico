@@ -35,7 +35,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
           <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
           <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-          <li><a class="nav-link scrollto" href="#departments">Área</a></li>
+          {{-- <li><a class="nav-link scrollto" href="#departments">Área</a></li> --}}
           <li><a class="nav-link scrollto" href="#doctors">Médicos</a></li>
           <li class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -214,7 +214,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
+    {{-- <section id="counts" class="counts">
       <div class="container">
 
         <div class="row">
@@ -254,7 +254,7 @@
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
+    </section><!-- End Counts Section --> --}}
 
     <!-- ======= Services Section ======= -->
 <section id="services" class="services">
@@ -360,7 +360,7 @@
 
       </div>
     </section><!-- End Appointment Section -->
-
+{{--
     <!-- ======= Departments Section ======= -->
     <section id="departments" class="departments">
       <div class="container">
@@ -457,7 +457,7 @@
         </div>
 
       </div>
-    </section><!-- End Departments Section -->
+    </section><!-- End Departments Section --> --}}
 
     <!-- ======= Doctors Section ======= -->
     <section id="doctors" class="doctors">
