@@ -8,6 +8,8 @@ use App\Models\information;
 use Illuminate\Http\Request;
 use Laravel\Ui\Presets\React;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Str;
 
 class informationController extends Controller
 {
@@ -23,17 +25,24 @@ class informationController extends Controller
         $categories= category::All();
         return view('info.create')->with(compact('categories'));
     }
+
     public function store(Request $request){
-        
-        if (!empty($request->hasFile('file'))) {
-            $url= $request->file('file')->store('public/section');
-        }
+
+        $nombre = Str::random(10) . $request->file('file')->getClientOriginalName();
+
+        $ruta = storage_path() . '\app\public\section/' . $nombre;
+
+        Image::make($request->file('file'))
+                ->resize(1500, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save($ruta);
 
         information::create([
             'title'        =>$request['title'],
             'description'  =>$request['description'],
             'descriptionck'=>$request['summary-ckeditor'],
-            'url'          =>$url,
+            'url'          =>'storage/section/' . $nombre,
             'category_id'  =>$request['category'],
             'user_id'      =>auth()->user()->id
         ]);
@@ -50,11 +59,22 @@ class informationController extends Controller
 
         $info = information::findOrFail($id);
 
-
         if ($request->hasFile('file'))
             {
-                Storage::delete($info->url);
-                $url= $request->file('file')->store('public/section');
+                $url = str_replace('storage', 'public', $info->url);
+                Storage::delete($url);
+
+                $nombre = Str::random(10) . $request->file('file')->getClientOriginalName();
+
+                $ruta = storage_path() . '\app\public\section/' . $nombre;
+
+                Image::make($request->file('file'))
+                        ->resize(1500, null, function ($constraint) {
+                            $constraint->aspectRatio();
+                        })
+                        ->save($ruta);
+
+                $url = 'storage/section/' . $nombre;
 
             }else{
                 $url= $info->url;
@@ -76,7 +96,8 @@ class informationController extends Controller
     {
         try {
             $info = information::findOrFail($id);
-            Storage::delete($info->url);
+            $url = str_replace('storage', 'public', $info->url);
+            Storage::delete($url);
             $info->delete();
             return back()->with('notification','Sección eliminada correctamente');
         } catch (Exception $e) {

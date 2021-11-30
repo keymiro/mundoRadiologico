@@ -47,7 +47,13 @@
                   <li><a href="#dd">Derechos y deberes</a></li>
                   <li><a href="#">Covid-19</a></li>
                   <li><a href="#">PQR</a></li>
-                  <li><a href="#">Estado situación financiera</a></li>
+                  <li>
+                         {{-- @foreach ($info as $i)
+                                @if($i->category->title=='Estado situación financiera')
+                                    <a href="{{Storage::url($i->url)}}">Estado situación financiera</a>
+                                @endif
+                            @endforeach --}}
+                 </li>
                 </ul>
               </li>
             </ul>
@@ -61,6 +67,11 @@
 
     </div>
   </header><!-- End Header -->
+@foreach ($info as $i)
+    @if($i->category->title=='prueba')
+    <img src="{{asset($i->url)}}" alt="" class="img-fluid">
+    @endif
+@endforeach
 
   {{-- style="margin-bottom:-100px;width: 100%;height: 70vh;" --}}
   <!-- ======= Hero Section ======= -->
@@ -72,6 +83,18 @@
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+            {{-- Foreach slider carrousel --}}
+            {{-- @foreach ($info as $i)
+                @if($i->category->title=='slider')
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="{{Storage::url($i->url)}}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block text-white">
+                        <h5>{{$i->title}}</h5>
+                        <p>{{$i->description}}.</p>
+                    </div>
+                </div>
+                @endif
+            @endforeach --}}
             <div class="carousel-item active" data-bs-interval="2000">
                 <img src="https://image.shutterstock.com/image-photo/doctor-man-stethoscope-hospital-260nw-555894940.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block text-white">
@@ -613,6 +636,18 @@
 
       <div class="container-fluid">
         <div class="row no-gutters">
+            {{-- foreach galeria --}}
+             {{-- @foreach ($info as $i)
+                @if($i->category->title=='galeria')
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                        <a href="" class="galelry-lightbox">
+                            <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid">
+                        </a>
+                        </div>
+                    </div>
+                @endif
+            @endforeach --}}
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
