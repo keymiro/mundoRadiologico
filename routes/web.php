@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',[WelcomeController::class,'welcome'])->name('index');
+Route::get('/Inicio',[WelcomeController::class,'welcome'])->name('index');
+Route::get('/Nosotros',[WelcomeController::class,'nosotros'])->name('nosotros');
+Route::get('/Servicios',[WelcomeController::class,'servicios'])->name('servicios');
+Route::get('/Medicos',[WelcomeController::class,'medicos'])->name('medicos');
+Route::get('/Galeria',[WelcomeController::class,'galeria'])->name('galeria');
+Route::get('/Preguntas-frecuentes',[WelcomeController::class,'faq'])->name('faq');
 Auth::routes(['register' => false]);
 Route::get('/Seccion/listado',[informationController::class,'index'])->name('info.home');
 Route::get('/Seccion/crear',[informationController::class,'create'])->name('info.create');

@@ -1,0 +1,76 @@
+@extends('layouts.nav')
+
+@section('content')
+ <!-- ======= Top Bar ======= -->
+ @include('layouts.topbar')
+</br></br></br></br>
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+                @foreach ($info as $i)
+                @if($i->category->title=='Nosotros')
+                    <div class="section-title">
+                        <h2><a href="">{{$i->title}}</a></h2>
+                    </div>
+                @endif
+            @endforeach
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+            @foreach ($info as $i)
+                    @if($i->category->title=='video')
+                    <a href="{{$i->description}}" class="glightbox play-btn mb-4"></a>
+                    @endif
+                 @endforeach
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3> @foreach ($info as $i)
+                    @if($i->category->title=='Nosotros')
+                    <p class="text-center">{{$i->description}}</p>
+                    @endif
+                 @endforeach
+            </h3>
+          {{-- <p></p> --}}
+
+            <div class="icon-box">
+              <div class="icon"><i class='bx bx-up-arrow-circle'></i></div>
+                @foreach ($info as $i)
+                    @if($i->category->title=='Política de Calidad')
+                        <h4 class="title"><a href="">{{$i->title}}</a></h4>
+                        <p class="description">{{$i->description}}</p>
+                    @endif
+                @endforeach
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class='bx bx-up-arrow-circle'></i></div>
+                @foreach ($info as $i)
+                    @if($i->category->title=='Nuestra Misión')
+                        <h4 class="title"><a href="">{{$i->title}}</a></h4>
+                        <p class="description">{{$i->description}}</p>
+                    @endif
+                @endforeach
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class='bx bx-up-arrow-circle'></i></div>
+                @foreach ($info as $i)
+                    @if($i->category->title=='Nuestra Visión')
+                        <h4 class="title"><a href="">{{$i->title}}</a></h4>
+                        <p class="description">{{$i->description}}</p>
+                    @endif
+                @endforeach
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+ @include('layouts.footer')
+
+@endsection
