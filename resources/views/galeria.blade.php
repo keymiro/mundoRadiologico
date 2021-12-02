@@ -97,7 +97,7 @@
 
         </div>
       </section><!-- End Gallery Section -->
-
+</main>
 
   <!-- ======= Footer ======= -->
  @include('layouts.footer')

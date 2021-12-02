@@ -15,12 +15,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/Inicio',[WelcomeController::class,'welcome'])->name('index');
+Route::get('/',[WelcomeController::class,'welcome'])->name('index');
 Route::get('/Nosotros',[WelcomeController::class,'nosotros'])->name('nosotros');
 Route::get('/Servicios',[WelcomeController::class,'servicios'])->name('servicios');
 Route::get('/Medicos',[WelcomeController::class,'medicos'])->name('medicos');
 Route::get('/Galeria',[WelcomeController::class,'galeria'])->name('galeria');
 Route::get('/Preguntas-frecuentes',[WelcomeController::class,'faq'])->name('faq');
+Route::get('/Derechos-y-deberes',[WelcomeController::class,'dd'])->name('dd');
+Route::get('/Contacto',[WelcomeController::class,'contacto'])->name('contact');
+Route::get('/Cita',[WelcomeController::class,'cita'])->name('cita');
+Route::get('/Covid-19',[WelcomeController::class,'covid'])->name('covid');
+Route::get('/pqr',[WelcomeController::class,'pqr'])->name('pqr');
+Route::post('/Enviando-mensaje-contacto',[WelcomeController::class,'contactoSend'])->name('contactoSend');
+Route::post('/Enviando-mensaje-cita',[WelcomeController::class,'citaSend'])->name('citaSend');
+Route::post('/Enviando-encuesta-sastifacion',[WelcomeController::class,'encuestaSastifacion'])->name('encuesasti');
 Auth::routes(['register' => false]);
 Route::get('/Seccion/listado',[informationController::class,'index'])->name('info.home');
 Route::get('/Seccion/crear',[informationController::class,'create'])->name('info.create');

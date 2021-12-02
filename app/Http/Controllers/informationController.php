@@ -28,21 +28,26 @@ class informationController extends Controller
 
     public function store(Request $request){
 
-        $nombre = Str::random(10) . $request->file('file')->getClientOriginalName();
+        if ($request->hasFile('file'))
+            {
+                $nombre = Str::random(10) . $request->file('file')->getClientOriginalName();
 
-        $ruta = storage_path() . '\app\public\section/' . $nombre;
+                $ruta = storage_path() . '\app\public\section/' . $nombre;
 
-        Image::make($request->file('file'))
-                ->resize(1500, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                })
-                ->save($ruta);
-
+                Image::make($request->file('file'))
+                        ->resize(null,1200, function ($constraint) {
+                            $constraint->aspectRatio();
+                        })
+                        ->save($ruta);
+                        $url = 'storage/section/' . $nombre;
+            }else{
+                $url= NULL;
+            }
         information::create([
             'title'        =>$request['title'],
             'description'  =>$request['description'],
             'descriptionck'=>$request['summary-ckeditor'],
-            'url'          =>'storage/section/' . $nombre,
+            'url'          =>$url,
             'category_id'  =>$request['category'],
             'user_id'      =>auth()->user()->id
         ]);

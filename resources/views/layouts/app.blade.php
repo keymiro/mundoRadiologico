@@ -82,7 +82,7 @@
         <main class="py-4 bg-secondary" style="min-height: 100vh;">
 
             <div>
-                @if(session('notification'))
+@if(session('notification'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         <h4 class="alert-heading">
             <strong> <i class="fas fa-check-circle"></i> {{ session('notification') }}</strong>

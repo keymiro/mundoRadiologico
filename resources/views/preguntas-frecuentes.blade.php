@@ -29,6 +29,7 @@
 
         </div>
       </section><!-- End Frequently Asked Questions Section -->
+    </main>
   <!-- ======= Footer ======= -->
  @include('layouts.footer')
 
