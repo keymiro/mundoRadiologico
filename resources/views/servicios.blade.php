@@ -21,7 +21,7 @@
                 @if($i->category->title=='services')
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch  mt-4">
                     <div class="icon-box">
-                            <div class="icon"><img class="img-fluid" src="{{Storage::url($i->url)}}" alt=""></div>
+                            <div class="icon"><img class="img-fluid" src="{{asset($i->url)}}" alt=""></div>
                             <h4><a href="">{{$i->title}}</a></h4>
                             <p>{!!$i->descriptionck!!}</p>
                     </div>
