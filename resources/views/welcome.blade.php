@@ -18,8 +18,8 @@
         <div class="carousel-inner">
                     <div class="carousel-item active">
                         @foreach ($info as $i)
-                            @if($i->category->title=='slider'){{asset($i->url)}}
-                                <img src="{{asset($i->url)}}" class="d-block w-100" alt="...">
+                            @if($i->category->title=='slider')
+                                <img src="{{Storage::url($i->url)}}" class="d-block w-100" alt="...">
                             @endif
                         @endforeach
                         <div class="carousel-caption d-none d-md-block">
@@ -30,7 +30,7 @@
                     <div class="carousel-item">
                         @foreach ($info as $i)
                             @if($i->category->title=='slider1')
-                                <img src="{{asset($i->url)}}" class="d-block w-100" alt="...">
+                                <img src="{{Storage::url($i->url)}}" class="d-block w-100" alt="...">
                             @endif
                         @endforeach
                         <div class="carousel-caption d-none d-md-block">
@@ -41,7 +41,7 @@
                     <div class="carousel-item">
                         @foreach ($info as $i)
                             @if($i->category->title=='slider2')
-                                <img src="{{asset($i->url)}}" class="d-block w-100" alt="...">
+                                <img src="{{Storage::url($i->url)}}" class="d-block w-100" alt="...">
                             @endif
                         @endforeach
                         <div class="carousel-caption d-none d-md-block">

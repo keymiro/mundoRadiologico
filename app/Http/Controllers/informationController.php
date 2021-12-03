@@ -29,28 +29,25 @@ class informationController extends Controller
     public function store(Request $request){
 
         if ($request->hasFile('file'))
-            {
-                $nombre = Str::random(10) . $request->file('file')->getClientOriginalName();
+        {
+            $url =$request->file('file')->store('public/section');
+        }else{
+            $url= NULL;
+        }
+        $information= new information();
+        $information->title = $request->input('title');
+        $information->description = $request->input('description');
+        $information->descriptionck = $request->input('summary-ckeditor');
+        $information->url = $url;
+        $information->category_id = $request->input('category');
+        $information->user_id = auth()->user()->id;
+        $information->save();
 
-                $ruta = storage_path() . '\app\public\section/' . $nombre;
-
-                Image::make($request->file('file'))
+        $image = Image::make(Storage::get($information->url))
                         ->resize(null,1200, function ($constraint) {
                             $constraint->aspectRatio();
-                        })
-                        ->save($ruta);
-                        $url = 'storage/section/' . $nombre;
-            }else{
-                $url= NULL;
-            }
-        information::create([
-            'title'        =>$request['title'],
-            'description'  =>$request['description'],
-            'descriptionck'=>$request['summary-ckeditor'],
-            'url'          =>$url,
-            'category_id'  =>$request['category'],
-            'user_id'      =>auth()->user()->id
-        ]);
+                        })->encode();
+        Storage::put($information->url,(string) $image);
 
         return back()->with('notification','Sección creada correctamente');
 
@@ -62,36 +59,29 @@ class informationController extends Controller
     }
     public function update(Request $request, $id){
 
-        $info = information::findOrFail($id);
-
         if ($request->hasFile('file'))
-            {
-                $url = str_replace('storage', 'public', $info->url);
-                Storage::delete($url);
+        {
+          $info =  information::findOrFail($id);
+          Storage::delete($info->url);
+          $url =  $request->file('file')->store('public/section');
+        }else{
+            $url= NULL;
+        }
 
-                $nombre = Str::random(10) . $request->file('file')->getClientOriginalName();
+        $information = information::findOrFail($id);
+        $information->title = $request->input('title');
+        $information->description = $request->input('description');
+        $information->descriptionck = $request->input('summary-ckeditor');
+        $information->url = $url;
+        $information->category_id = $request->input('category');
+        $information->user_id = auth()->user()->id;
+        $information->save();
 
-                $ruta = storage_path() . '\app\public\section/' . $nombre;
-
-                Image::make($request->file('file'))
-                        ->resize(1500, null, function ($constraint) {
+        $image = Image::make(Storage::get($information->url))
+                        ->resize(null,1200, function ($constraint) {
                             $constraint->aspectRatio();
-                        })
-                        ->save($ruta);
-
-                $url = 'storage/section/' . $nombre;
-
-            }else{
-                $url= $info->url;
-            }
-        $info->update([
-            'title'        =>$request['title'],
-            'description'  =>$request['description'],
-            'descriptionck'=>$request['summary-ckeditor'],
-            'url'          =>$url,
-            'category_id'  =>$request['category'],
-            'user_id'      =>auth()->user()->id
-        ]);
+                        })->encode();
+        Storage::put($information->url,$image);
 
         return back()->with('notification','Sección actualizada correctamente');
 
@@ -101,9 +91,9 @@ class informationController extends Controller
     {
         try {
             $info = information::findOrFail($id);
-            $url = str_replace('storage', 'public', $info->url);
-            Storage::delete($url);
+            Storage::delete($info->url);
             $info->delete();
+
             return back()->with('notification','Sección eliminada correctamente');
         } catch (Exception $e) {
             return back()->with('error','No se ha podido eliminar, por que esta sección tiene categorias vinculadas');
