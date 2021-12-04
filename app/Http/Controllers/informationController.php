@@ -42,12 +42,14 @@ class informationController extends Controller
         $information->category_id = $request->input('category');
         $information->user_id = auth()->user()->id;
         $information->save();
-
+        if ($request->hasFile('file'))
+        {
         $image = Image::make(Storage::get($information->url))
                         ->resize(null,1200, function ($constraint) {
                             $constraint->aspectRatio();
                         })->encode();
         Storage::put($information->url,(string) $image);
+        }
 
         return back()->with('notification','Sección creada correctamente');
 
@@ -64,9 +66,6 @@ class informationController extends Controller
           $info =  information::findOrFail($id);
           Storage::delete($info->url);
           $url =  $request->file('file')->store('public/section');
-        }else{
-            $url= NULL;
-        }
 
         $information = information::findOrFail($id);
         $information->title = $request->input('title');
@@ -82,6 +81,16 @@ class informationController extends Controller
                             $constraint->aspectRatio();
                         })->encode();
         Storage::put($information->url,$image);
+        }else{
+            $information = information::findOrFail($id);
+            $information->title = $request->input('title');
+            $information->description = $request->input('description');
+            $information->descriptionck = $request->input('summary-ckeditor');
+            $information->url = $information->url;
+            $information->category_id = $request->input('category');
+            $information->user_id = auth()->user()->id;
+            $information->save();
+        }
 
         return back()->with('notification','Sección actualizada correctamente');
 
