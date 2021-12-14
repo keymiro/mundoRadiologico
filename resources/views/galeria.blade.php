@@ -21,7 +21,7 @@
                   @if($i->category->title=='galeria')
                   <div class="col-lg-3 col-md-4">
                       <div class="gallery-item">
-                          <a href="" class="galelry-lightbox">
+                          <a href="{{Storage::url($i->url)}}" class="galelry-lightbox">
                               <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid">
                           </a>
                           </div>
