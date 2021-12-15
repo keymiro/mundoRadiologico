@@ -65,7 +65,6 @@
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container">
-
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
@@ -85,9 +84,9 @@
               <div class="row">
                 @foreach ($info as $i)
                 @if($i->category->title=='Portafolio')
-                <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0">
-                      <i class='bx bx-check-square'></i>
+                <div  class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0 " >
+                    <div class="pic"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
                       <h4>{{$i->title}}</h4>
                       <p>{{$i->description}}</p>
                     </div>

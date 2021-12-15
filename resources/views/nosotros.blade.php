@@ -16,12 +16,9 @@
                 @endif
             @endforeach
         <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-            @foreach ($info as $i)
-                    @if($i->category->title=='video')
-                    <a href="{{$i->description}}" class="glightbox play-btn mb-4"></a>
-                    @endif
-                 @endforeach
+
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center row align-items-center position-relative">
+                 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VGlyOMhheW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
@@ -34,9 +31,9 @@
           {{-- <p></p> --}}
 
             <div class="icon-box">
-              <div class="icon"><i class='bx bx-up-arrow-circle'></i></div>
                 @foreach ($info as $i)
                     @if($i->category->title=='Política de Calidad')
+                        <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
                         <h4 class="title"><a href="">{{$i->title}}</a></h4>
                         <p class="description">{{$i->description}}</p>
                     @endif
@@ -44,9 +41,9 @@
             </div>
 
             <div class="icon-box">
-              <div class="icon"><i class='bx bx-up-arrow-circle'></i></div>
                 @foreach ($info as $i)
                     @if($i->category->title=='Nuestra Misión')
+                    <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
                         <h4 class="title"><a href="">{{$i->title}}</a></h4>
                         <p class="description">{{$i->description}}</p>
                     @endif
@@ -54,9 +51,9 @@
             </div>
 
             <div class="icon-box">
-              <div class="icon"><i class='bx bx-up-arrow-circle'></i></div>
                 @foreach ($info as $i)
                     @if($i->category->title=='Nuestra Visión')
+                        <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
                         <h4 class="title"><a href="">{{$i->title}}</a></h4>
                         <p class="description">{{$i->description}}</p>
                     @endif

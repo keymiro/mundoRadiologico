@@ -18,15 +18,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[WelcomeController::class,'welcome'])->name('index');
 Route::get('/Nosotros',[WelcomeController::class,'nosotros'])->name('nosotros');
 Route::get('/Servicios',[WelcomeController::class,'servicios'])->name('servicios');
-Route::get('/Medicos',[WelcomeController::class,'medicos'])->name('medicos');
 Route::get('/Galeria',[WelcomeController::class,'galeria'])->name('galeria');
 Route::get('/Preguntas-frecuentes',[WelcomeController::class,'faq'])->name('faq');
 Route::get('/Derechos-y-deberes',[WelcomeController::class,'dd'])->name('dd');
 Route::get('/Contacto',[WelcomeController::class,'contacto'])->name('contact');
 Route::get('/Cita',[WelcomeController::class,'cita'])->name('cita');
 Route::get('/Covid-19',[WelcomeController::class,'covid'])->name('covid');
+Route::get('/EstadosFinancieros',[WelcomeController::class,'finan'])->name('finan');
 Route::get('/pqr',[WelcomeController::class,'pqr'])->name('pqr');
+Route::get('/pqrs',[WelcomeController::class,'pqrs'])->name('pqrs');
+Route::get('/ConsentimeintoInformado',[WelcomeController::class,'ConInf'])->name('ConInf');
+Route::get('/PreparacionesDg',[WelcomeController::class,'PrDG'])->name('PrDG');
+Route::get('/Trabaja-Con-Nosotros',[WelcomeController::class,'TrabNos'])->name('TrabNos');
+Route::post('/Enviando-Trabaja-Con-Nosotros',[WelcomeController::class,'TrabNosSend'])->name('TrabNosSend');
 Route::post('/Enviando-mensaje-contacto',[WelcomeController::class,'contactoSend'])->name('contactoSend');
+
 Route::post('/Enviando-mensaje-cita',[WelcomeController::class,'citaSend'])->name('citaSend');
 Route::post('/Enviando-encuesta-sastifacion',[WelcomeController::class,'encuestaSastifacion'])->name('encuesasti');
 Auth::routes(['register' => false]);
@@ -37,7 +43,6 @@ Route::get('/Seccion/editar/{id}',[informationController::class,'edit'])->name('
 Route::patch('/Seccion/editar/{id}',[informationController::class,'update'])->name('info.update');
 Route::delete('/Seccion/eliminar/{id}',[informationController::class,'delete'])->name('info.delete');
 Route::post('Seccion/subirImagen',[informationController::class,'upload'])->name('upload');
-
 Route::get('/Categoria/listado',[informationController::class,'indexCategory'])->name('info.indexCategory');
 Route::get('/Categoria/crear',[informationController::class,'createCategory'])->name('info.createCategory');
 Route::get('/Categoria/editar/{id}',[informationController::class,'editCategory'])->name('info.editCategory');

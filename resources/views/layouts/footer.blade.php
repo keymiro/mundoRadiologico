@@ -65,8 +65,8 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="https://www.facebook.com/mundoradiologico/"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.youtube.com/watch?v=VGlyOMhheW0" class="youtube"><i class="bx bxl-youtube"></i></a>
+        <a href="https://www.facebook.com/mundoradiologico/" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.youtube.com/channel/UCJslrQjl32e3U5e1zkaYnsg" class="youtube"><i class="bx bxl-youtube"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->

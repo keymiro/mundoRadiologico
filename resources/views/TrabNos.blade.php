@@ -14,10 +14,10 @@
         </div>
     @endif
       <div class="section-title">
-        <h2>Aparta una cita</h2>
+        <h2>TRABAJA CON NOSOTROS</h2>
       </div>
 
-      <form action="{{route('citaSend')}}" method="post" enctype="multipart/form-data">
+      <form action="{{route('TrabNosSend')}}" method="post" enctype="multipart/form-data">
         @csrf <div class="row">
           <div class="col-md-4 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Nombre completo" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
@@ -34,42 +34,18 @@
         </div>
         <div class="row">
           <div class="col-md-4 form-group">
-            <input type="text" name="document" class="form-control" id="document" placeholder="Documento de identidad" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="text" class="form-control" name="city" id="city" placeholder="Ciudad" data-rule="date" data-msg="Please enter a valid email">
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="text" class="form-control" name="direction" id="direction" placeholder="Dirección" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <input type="text" name="document" class="form-control" id="document" placeholder="Cargo" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
             <div class="validate"></div>
           </div>
         </div>
-        <div class="row">
 
-          <div class="col-md-4 form-group mt-3">
-            <select name="workingday" id="workingday" class="form-select">
-              <option value="">Jornada</option>
-              <option value="Mañana">Mañana</option>
-              <option value="Tarde">Tarde</option>
-
-            </select>
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-4 form-group mt-3">
-              <label for="datehb">Fecha de nacimiento</label>
-              <input type="date" class="form-control" name="datehb" id="datehb" placeholder="fecha de nacimiento" data-rule="date" data-msg="Please enter a valid email">
-              <div class="validate"></div>
-          </div>
-        </div>
 
         <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Digite el procedimiento tal como aparece en su orden y/o autorización medica"></textarea>
+          <textarea class="form-control" name="message" rows="5" placeholder="Informacion adicional"></textarea>
           <div class="validate"></div>
         </div>
         <div class="form-group mt-3">
-            <label for="file" class="form-control">Adjuntar orden Medica/Autorización EPS/Historia Clínica: </label>
+            <label for="file" class="form-control">Adjuntar Archivo</label>
           <input type="file" class="form-control" name="file" id="file">
           <div class="validate"></div>
         </div>
@@ -81,7 +57,7 @@
                             </div>
           @endif
         </div>
-        <div class="text-center"><button type="submit" class="btn btn-primary">Apartar cita</button></div>
+        <div class="text-center"><button type="submit" class="btn btn-primary">Enviar</button></div>
       </form>
 
     </div>

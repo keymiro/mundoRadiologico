@@ -1,13 +1,13 @@
 <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto: gerencia@mundoradiologico.com">gerencia@mundoradiologico.com</a>
+        <i class="bi bi-envelope"></i> <a href="mailto: Mundoradiologico@gmail.com">Mundoradiologico@gmail.com</a>
         {{-- <i class="bi bi-phone"></i> Tel (8) 633 3216 --}}
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
         <a href="{{route('login')}}">Ingresar</a>
         <a href="https://www.facebook.com/mundoradiologico/" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.youtube.com/watch?v=VGlyOMhheW0"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.youtube.com/channel/UCJslrQjl32e3U5e1zkaYnsg"><i class="bi bi-youtube"></i></a>
       </div>
     </div>
   </div>
@@ -31,29 +31,31 @@
           <li><a class="nav-link scrollto {{request()->is('Inicio')? 'active':'' }}" href="{{route('index')}}">Inicio</a></li>
           <li><a class="nav-link scrollto {{request()->is('Nosotros')? 'active':'' }}" href="{{route('nosotros')}}">Nosotros</a></li>
           <li><a class="nav-link scrollto {{request()->is('Servicios')? 'active':'' }}" href="{{route('servicios')}}">Servicios</a></li>
-          {{-- <li><a class="nav-link scrollto" href="#departments">Área</a></li> --}}
-          <li><a class="nav-link scrollto {{request()->is('Medicos')? 'active':'' }}" href="{{route('medicos')}}">Médicos</a></li>
-          <li class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a class="{{request()->is('Galeria')? 'active':'' }}" href="{{route('galeria')}}">Galería</a></li>
-              <li><a class="{{request()->is('Enviando-encuesta-sastifacion')? 'active':'' }}" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Encuesta de sastifación</a></li>
-              <li><a class="{{request()->is('Preguntas-frecuentes')? 'active':'' }}" href="{{route('faq')}}">Preguntas frecuentes</a></li>
-              <li class="dropdown"><a href="#"><span>Información al usuario</span> <i class="bi bi-chevron-right"></i></a>
+          <li class="dropdown"><a href="#"><span>Información al usuario</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   {{-- <li><a href=""></a></li> --}}
+                  <li><a class="{{request()->is('PQRS')? 'active':'' }}" href="{{route('pqrs')}}">PQRS</a></li>
                   <li><a class="{{request()->is('Derechos-y-deberes')? 'active':'' }}" href="{{route('dd')}}">Derechos y deberes</a></li>
-                  <li><a class="{{request()->is('Covid-19')? 'active':'' }}" href="{{route('covid')}}">Covid-19</a></li>
-                  <li><a class="{{request()->is('pqr')? 'active':'' }}" href="{{route('pqr')}}">PQR</a></li>
-                  <li>
-                    <a class="{{request()->is('pqr')? 'active':'' }}" href="http://www.mundoradiologico.com/wp-content/uploads/2018/04/EF-PROP-GRAL-2017-MR-FF.pdf" target="_blank">Estado situación financiera</a></li>
+                  <li><a class="{{request()->is('Consentimientos Informados')? 'active':'' }}" href="{{route('ConInf')}}">Consentimientos Informados</a></li>
+                  <li><a class="{{request()->is('PrDG')? 'active':'' }}" href="{{route('PrDG')}}">Preparaciones Para Examenes Diagnosticos</a></li>
+                </ul>
+              </li>
+          {{-- <li><a class="nav-link scrollto" href="#departments">Área</a></li> --}}
+              <li class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+
+              <li><a class="{{request()->is('Clientes')? 'active':'' }}" href="{{route('galeria')}}">Clientes</a></li>
+              <li><a class="{{request()->is('Covid-19')? 'active':'' }}" href="{{route('covid')}}">Covid-19</a></li>
+              <li><a class="{{request()->is('pqr')? 'active':'' }}" href="{{route('pqr')}}">PQR</a></li>
+              <li><a class="{{request()->is('Preguntas-frecuentes')? 'active':'' }}" href="{{route('faq')}}">Preguntas frecuentes</a></li>
+              <li><a class="{{request()->is('Estados Fianancieros')? 'active':'' }}" href="{{route('finan')}}">Estados Financieros</a></li>
                          {{-- @foreach ($info as $i)
                                 @if($i->category->title=='Estado situación financiera')
                                     <a href="{{Storage::url($i->url)}}">Estado situación financiera</a>
                                 @endif
                             @endforeach --}}
-                 </li>
-                </ul>
               </li>
+              <li><a class="{{request()->is('Trabaja Con Nosotros')? 'active':'' }}" href="{{route('TrabNos')}}">Trabaja Con Nosotros</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto {{request()->is('Contacto')? 'active':'' }}" href="{{route('contact')}}">Contacto</a></li>
@@ -61,7 +63,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
       <a href="{{route('cita')}}" class="appointment-btn scrollto {{request()->is('Cita')? 'text-info':'' }}"><span class="d-none d-md-inline">Apartar</span> Cita</a>
-      <a href="" class="appointment-btn scrollto " data-bs-toggle="modal" data-bs-target="#paciente">Paciente</a>
+      <a href="" class="appointment-btn scrollto " data-bs-toggle="modal" data-bs-target="#exampleModal">Paciente</a>
     </div>
   </header><!-- End Header -->
 
@@ -135,11 +137,10 @@
                     Probablemente no
                 </label>
               </div>
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-primary" data-bs-target="#exampleModal">Enviar</button>
         </div>
     </form>
       </div>
@@ -150,13 +151,13 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Paciente</h5>
+          <h5 class="modal-title" id="exampleModalLabel"> Resultados Paciente</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-         <a href="">Portal Paciente</a>
+         <a href="">Imagenes</a>
         </br>
-         <a href="">Portal </a>
+         <a href="">Reportes</a>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

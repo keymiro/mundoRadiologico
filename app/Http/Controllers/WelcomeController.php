@@ -81,8 +81,35 @@ class WelcomeController extends Controller
         return view('covid')->with(compact('info'));
     }
 
+    public function finan(){
+        $info = information::All();
+        return view('finan')->with(compact('info'));
+    }
+
     public function pqr(){
         $info = information::All();
         return view('pqr')->with(compact('info'));
     }
+    public function pqrs(){
+        $info = information::All();
+        return view('pqrs')->with(compact('info'));
+    }
+    public function ConInf(){
+        $info = information::All();
+        return view('ConInf')->with(compact('info'));
+    }
+    public function PrDG(){
+        $info = information::All();
+        return view('PrDG')->with(compact('info'));
+    }
+    public function TrabNos(){
+        $info = information::All();
+        return view('TrabNos')->with(compact('info'));
+    }
+    public function TrabNosSend(){
+        $message = request();
+        Mail::to('Atencionusuario.mr@gmail.com')->send(new MessageCita($message));
+        return back()->with('notification','Mensaje enviado correctamente');
+    }
+
 }
