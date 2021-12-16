@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\MessageCita;
 use App\Mail\MessageContact;
 use App\Mail\MessageEncuestaSastifacion;
+use App\Mail\MessageWorkWithUs;
 use App\Models\information;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -108,7 +109,7 @@ class WelcomeController extends Controller
     }
     public function TrabNosSend(){
         $message = request();
-        Mail::to('Atencionusuario.mr@gmail.com')->send(new MessageCita($message));
+        Mail::to('Atencionusuario.mr@gmail.com')->send(new MessageWorkWithUs($message));
         return back()->with('notification','Mensaje enviado correctamente');
     }
 

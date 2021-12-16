@@ -19,17 +19,10 @@
               {{-- foreach galeria --}}
                @foreach ($info as $i)
                   @if($i->category->title=='galeria')
-<<<<<<< Updated upstream
                   <div class="col-lg-3 col-md-4">
                       <div class="gallery-item">
-                          <a href="{{Storage::url($i->url)}}" class="galelry-lightbox">
+                          <a href="{{Storage::url($i->url)}}" class="galelry-lightbox" target="_blank">
                               <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid">
-=======
-                  <div class="col-3">
-                      <div class="gallery-ite1m" >
-                          <a  class="galelry-lightbox" >
-                            <div ><img src="{{Storage::url($i->url)}}"   class="img-fluid" ></div>
->>>>>>> Stashed changes
                           </a>
                           </div>
                       </div>

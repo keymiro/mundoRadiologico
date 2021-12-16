@@ -17,14 +17,19 @@
         @endforeach
         </div>
         <div class="row">
+
             @foreach ($info as $i)
                 @if($i->category->title=='services')
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch  mt-4">
-                    <div class="icon-box">
-                            <div class="icon"><img class="img-fluid" src="{{Storage::url($i->url)}}" alt=""></div>
-                            <h4><a href="">{{$i->title}}</a></h4>
+                <div class="col-lg-4 col-md-6 align-items-stretch  mt-4">
+                    <a class="btn btn-primary text-white" data-bs-toggle="collapse" href="#serv{{$i->id}}ices" role="button" aria-expanded="false" aria-controls="serv{{$i->id}}ices">
+                        {{$i->title}}  - <img class="img-fluid" src="{{Storage::url($i->url)}}" alt="" style="width: 13%">
+                      </a>
+                      <div class="collapse" id="serv{{$i->id}}ices">
+                        <div class="card card-body">
+                            <h4><a href=""></a></h4>
                             <p>{!!$i->descriptionck!!}</p>
-                    </div>
+                        </div>
+                      </div>
                 </div>
                 @endif
             @endforeach

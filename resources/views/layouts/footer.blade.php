@@ -1,4 +1,4 @@
-<footer id="footer">
+<br id="footer">
 
     {{-- <div class="footer-top">
       <div class="container">
@@ -48,7 +48,7 @@
         </div>
       </div>
     </div> --}}
-
+</br>
     <div class="container d-md-flex py-4">
 
       <div class="me-md-auto text-center text-md-start">

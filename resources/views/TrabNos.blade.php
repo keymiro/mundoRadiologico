@@ -34,7 +34,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 form-group">
-            <input type="text" name="document" class="form-control" id="document" placeholder="Cargo" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <input type="text" name="job" class="form-control" id="job" placeholder="Cargo" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
             <div class="validate"></div>
           </div>
         </div>

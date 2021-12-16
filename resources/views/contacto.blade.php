@@ -54,7 +54,11 @@
             </div>
 
             <div class="col-lg-8 mt-5 mt-lg-0">
-
+                @foreach ($info as $i)
+                @if($i->category->title=='contacto')
+                            <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid">
+                @endif
+            @endforeach
             </div>
 
           </div>

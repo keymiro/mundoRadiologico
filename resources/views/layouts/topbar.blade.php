@@ -31,13 +31,13 @@
           <li><a class="nav-link scrollto {{request()->is('Inicio')? 'active':'' }}" href="{{route('index')}}">Inicio</a></li>
           <li><a class="nav-link scrollto {{request()->is('Nosotros')? 'active':'' }}" href="{{route('nosotros')}}">Nosotros</a></li>
           <li><a class="nav-link scrollto {{request()->is('Servicios')? 'active':'' }}" href="{{route('servicios')}}">Servicios</a></li>
-          <li class="dropdown"><a href="#"><span>Información al usuario</span> <i class="bi bi-chevron-right"></i></a>
+          <li class="dropdown"><a href="#"><span>Información al usuario</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   {{-- <li><a href=""></a></li> --}}
                   <li><a class="{{request()->is('PQRS')? 'active':'' }}" href="{{route('pqrs')}}">PQRS</a></li>
                   <li><a class="{{request()->is('Derechos-y-deberes')? 'active':'' }}" href="{{route('dd')}}">Derechos y deberes</a></li>
-                  <li><a class="{{request()->is('Consentimientos Informados')? 'active':'' }}" href="{{route('ConInf')}}">Consentimientos Informados</a></li>
-                  <li><a class="{{request()->is('PrDG')? 'active':'' }}" href="{{route('PrDG')}}">Preparaciones Para Examenes Diagnosticos</a></li>
+                  <li><a class="{{request()->is('Consentimientos Informados')? 'active':'' }}" href="{{route('ConInf')}}">Consentimientos informados</a></li>
+                  <li><a class="{{request()->is('PrDG')? 'active':'' }}" href="{{route('PrDG')}}">Preparaciones para examenes diagnosticos</a></li>
                 </ul>
               </li>
           {{-- <li><a class="nav-link scrollto" href="#departments">Área</a></li> --}}
@@ -48,14 +48,14 @@
               <li><a class="{{request()->is('Covid-19')? 'active':'' }}" href="{{route('covid')}}">Covid-19</a></li>
               <li><a class="{{request()->is('pqr')? 'active':'' }}" href="{{route('pqr')}}">PQR</a></li>
               <li><a class="{{request()->is('Preguntas-frecuentes')? 'active':'' }}" href="{{route('faq')}}">Preguntas frecuentes</a></li>
-              <li><a class="{{request()->is('Estados Fianancieros')? 'active':'' }}" href="{{route('finan')}}">Estados Financieros</a></li>
+              <li><a class="{{request()->is('Estados Fianancieros')? 'active':'' }}" href="{{route('finan')}}">Estados financieros</a></li>
                          {{-- @foreach ($info as $i)
                                 @if($i->category->title=='Estado situación financiera')
                                     <a href="{{Storage::url($i->url)}}">Estado situación financiera</a>
                                 @endif
                             @endforeach --}}
               </li>
-              <li><a class="{{request()->is('Trabaja Con Nosotros')? 'active':'' }}" href="{{route('TrabNos')}}">Trabaja Con Nosotros</a></li>
+              <li><a class="{{request()->is('Trabaja Con Nosotros')? 'active':'' }}" href="{{route('TrabNos')}}">Trabaja con nosotros</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto {{request()->is('Contacto')? 'active':'' }}" href="{{route('contact')}}">Contacto</a></li>
@@ -63,11 +63,11 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
       <a href="{{route('cita')}}" class="appointment-btn scrollto {{request()->is('Cita')? 'text-info':'' }}"><span class="d-none d-md-inline">Apartar</span> Cita</a>
-      <a href="" class="appointment-btn scrollto " data-bs-toggle="modal" data-bs-target="#exampleModal">Paciente</a>
+      <a href="" class="appointment-btn scrollto " data-bs-toggle="modal" data-bs-target="#encuesta">Paciente</a>
     </div>
   </header><!-- End Header -->
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="encuesta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -140,7 +140,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-primary" data-bs-target="#exampleModal">Enviar</button>
+          <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paciente">Enviar</button>
         </div>
     </form>
       </div>

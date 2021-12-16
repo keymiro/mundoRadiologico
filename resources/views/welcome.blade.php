@@ -84,8 +84,8 @@
               <div class="row">
                 @foreach ($info as $i)
                 @if($i->category->title=='Portafolio')
-                <div  class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0 " >
+                <div  class="col-xl-4 d-flex align-items-stretch my-2">
+                    <div class="icon-box mt-4 mt-xl-0 ">
                     <div class="pic"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
                       <h4>{{$i->title}}</h4>
                       <p>{{$i->description}}</p>
