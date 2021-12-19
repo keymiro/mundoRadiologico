@@ -115,7 +115,7 @@ class WelcomeController extends Controller
     }
     public function pqrSend(){
         $message = request();
-        Mail::to('diazmanc99@gmail.com')->send(new MessagePqrs($message));
+        Mail::to('Atencionusuario.mr@gmail.com')->send(new MessagePqrs($message));
         return back()->with('notification','Mensaje enviado correctamente');
     }
 
