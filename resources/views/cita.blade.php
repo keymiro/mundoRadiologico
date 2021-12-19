@@ -12,7 +12,7 @@
         <div class="sent-message">
             <strong> <i class="fas fa-check-circle"></i> {{ session('notification') }}</strong>
         </div>
-    @endif
+        @endif
       <div class="section-title">
         <h2>Aparta una cita</h2>
       </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\MessageCita;
 use App\Mail\MessageContact;
 use App\Mail\MessageEncuestaSastifacion;
+use App\Mail\MessagePqrs;
 use App\Mail\MessageWorkWithUs;
 use App\Models\information;
 use Illuminate\Http\Request;
@@ -112,5 +113,11 @@ class WelcomeController extends Controller
         Mail::to('Atencionusuario.mr@gmail.com')->send(new MessageWorkWithUs($message));
         return back()->with('notification','Mensaje enviado correctamente');
     }
+    public function pqrSend(){
+        $message = request();
+        Mail::to('diazmanc99@gmail.com')->send(new MessagePqrs($message));
+        return back()->with('notification','Mensaje enviado correctamente');
+    }
+
 
 }

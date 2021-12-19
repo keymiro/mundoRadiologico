@@ -34,6 +34,7 @@ Route::post('/Enviando-Trabaja-Con-Nosotros',[WelcomeController::class,'TrabNosS
 Route::post('/Enviando-mensaje-contacto',[WelcomeController::class,'contactoSend'])->name('contactoSend');
 
 Route::post('/Enviando-mensaje-cita',[WelcomeController::class,'citaSend'])->name('citaSend');
+Route::post('/Enviando-mensaje-Pqrs',[WelcomeController::class,'pqrSend'])->name('pqrSend');
 Route::post('/Enviando-encuesta-sastifacion',[WelcomeController::class,'encuestaSastifacion'])->name('encuesasti');
 Auth::routes(['register' => false]);
 Route::get('/Seccion/listado',[informationController::class,'index'])->name('info.home');
