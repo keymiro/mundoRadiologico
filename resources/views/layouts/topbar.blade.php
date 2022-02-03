@@ -13,7 +13,7 @@
   </div>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top bg-blue">
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto">
@@ -34,7 +34,7 @@
           <li class="dropdown"><a href="#"><span>Información al usuario</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   {{-- <li><a href=""></a></li> --}}
-                  <li><a class="{{request()->is('PQRS')? 'active':'' }}" href="{{route('pqrs')}}">PQRS</a></li>
+                  <li><a class="{{request()->is('PQRS')? 'active':'' }}" href="{{route('pqrs')}}"><i class="fas fa-question-circle" style="width: 150%"></i> PQRS</a></li>
                   <li><a class="{{request()->is('Derechos-y-deberes')? 'active':'' }}" href="{{route('dd')}}">Derechos y deberes</a></li>
                   <li><a class="{{request()->is('Consentimientos Informados')? 'active':'' }}" href="{{route('ConInf')}}">Consentimientos informados</a></li>
                   <li><a class="{{request()->is('PrDG')? 'active':'' }}" href="{{route('PrDG')}}">Preparaciones para examenes diagnosticos</a></li>

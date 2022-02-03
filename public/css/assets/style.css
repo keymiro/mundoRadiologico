@@ -24,7 +24,9 @@ body {
     color: #3291e6;
     text-decoration: none;
   }
-
+.bg-blue {
+    background: #212651 !important;
+}
   h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
   }
@@ -236,7 +238,7 @@ body {
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
-    color: #2c4964;
+    color: #ffffff;
     white-space: nowrap;
     transition: 0.3s;
     border-bottom: 2px solid #fff;
