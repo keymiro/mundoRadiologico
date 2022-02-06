@@ -6,6 +6,7 @@
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
         <a href="{{route('login')}}">Ingresar</a>
+        <a href="https://www.instagram.com/mundoradiologicosas/" class="Instagram"><i class="bi bi-instagram"></i></a>
         <a href="https://www.facebook.com/mundoradiologico/" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.youtube.com/channel/UCJslrQjl32e3U5e1zkaYnsg"><i class="bi bi-youtube"></i></a>
       </div>
@@ -13,16 +14,19 @@
   </div>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top bg-blue">
+  <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto">
+<div id="logo" class="me-auto">
+<h1 class="logo ">
         @foreach ($info as $i)
             @if($i->category->title=='logo')
             <a href="{{route('index')}}"> <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid" style="width:200%"></a>
             @endif
         @endforeach
-    </h1>
+       </h1>
+</div>
+
+
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -34,7 +38,7 @@
           <li class="dropdown"><a href="#"><span>Información al usuario</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   {{-- <li><a href=""></a></li> --}}
-                  <li><a class="{{request()->is('PQRS')? 'active':'' }}" href="{{route('pqrs')}}"><i class="fas fa-question-circle" style="width: 150%"></i> PQRS</a></li>
+                  <li><a class="{{request()->is('PQRS')? 'active':'' }}" href="{{route('pqrs')}}">PQRS</a></li>
                   <li><a class="{{request()->is('Derechos-y-deberes')? 'active':'' }}" href="{{route('dd')}}">Derechos y deberes</a></li>
                   <li><a class="{{request()->is('Consentimientos Informados')? 'active':'' }}" href="{{route('ConInf')}}">Consentimientos informados</a></li>
                   <li><a class="{{request()->is('PrDG')? 'active':'' }}" href="{{route('PrDG')}}">Preparaciones para examenes diagnosticos</a></li>
