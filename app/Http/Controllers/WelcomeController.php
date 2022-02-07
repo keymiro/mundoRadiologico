@@ -43,11 +43,6 @@ class WelcomeController extends Controller
     return view('nosotros')->with(compact('info'));
     }
 
-    public function servicios(){
-        $info = information::All();
-        return view('servicios')->with(compact('info'));
-    }
-
     public function medicos(){
         $info = information::All();
         return view('medicos')->with(compact('info'));
