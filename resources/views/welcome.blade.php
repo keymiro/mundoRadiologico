@@ -61,46 +61,55 @@
       </div>
     </div>
 </section>
-  <main id="main">
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="content">
-                @foreach ($info as $i)
-                    @if($i->category->title=='asider-azul')
-                    <h3>{{$i->title}}</h3>
-                    <p class="description">{{$i->description}}</p>
-                    @endif
-                @endforeach
-              {{-- <div class="text-center">
-                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-              </div> --}}
-            </div>
-          </div>
-          <div class="col-lg-8 d-flex align-items-stretch">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                @foreach ($info as $i)
-                @if($i->category->title=='Portafolio')
-                <div  class="col-xl-4 d-flex align-items-stretch my-2">
-                    <div class="icon-box mt-4 mt-xl-0 ">
-                    <div class="pic"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
-                      <h4>{{$i->title}}</h4>
-                      <p>{{$i->description}}</p>
-                    </div>
-                  </div>
-                @endif
-            @endforeach
-              </div>
-            </div><!-- End .content-->
-          </div>
-        </div>
+  
+<!-- Menu de servicios-->
 
-      </div>
+@php
+      $e=1;
+      $f=1;
+@endphp
+<div class="container" id="navge" >
+<div class="d-flex align-items-start" id="navgea">
+  <div class="nav flex-column  me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+  @foreach ($info as $i)
+  @if($i->category->title=='services')
+  @if($e==1)
+    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><li class="flech"></li>{{$i->title}}</button>
+  @endif
+  @if($e>1)
+    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v{{$i->id}}" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><li class="flech"></li>{{$i->title}}</button>
+    @endif
+    @php
+      $e=$i->id;
+  @endphp
+    @endif
+  @endforeach
+  </div>
+  <div class="tab-content" id="v-pills-tabContent">
+  @foreach ($info as $i)
+  @if($i->category->title=='services')  
+  @if($f==1)
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+    <h1> {{$i->title}}</h1>  
+    {!!$i->descriptionck!!}</div>
+    @endif
+  @if($f>1)
+    <div class="tab-pane fade" id="v{{$i->id}}" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+    <h1> {{$i->title}} </h1>    
+    {!!$i->descriptionck!!}</div>
+    @endif
+    @php
+      $f=$i->id;
+  @endphp
+    @endif
+  @endforeach
+  </div>
+</div>
+</div>
+
+
+
 <!-- End .content-->
-
     </section><!-- End Why Us Section -->
   </main><!-- End #main -->
   @include('layouts.footer')

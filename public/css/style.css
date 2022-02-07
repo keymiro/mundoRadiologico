@@ -6,4 +6,93 @@ a {
   a:hover {
     color: #f8f8f8;
     text-decoration: none;
+
   }
+
+#carouselExampleCaptions{
+margin-top: 4em;
+  }
+
+#navge {
+  position: relative;
+  width: 100%;
+  height:30em ;
+}
+
+#navge #navgea 
+{
+border: 1px solid #ddd;
+}
+#navge #navgea:hover
+{
+box-shadow: 0px 0px 11px 6px #dcddddc7;
+
+}
+#navge #navgea .tab-content
+{
+  font-size: 80%;
+  /*background-color: aquamarine;*/
+}
+#navge #navgea #v-pills-tab button
+{
+  position: relative;
+  width: 20em;
+  color: rgb(255, 255, 255);
+  background-color:#191743;
+  border-color: #ddd;
+  text-align: left;
+font-size: larger;
+  /*background-color: aquamarine;*/
+}
+#navge #navgea #v-pills-tab button
+{
+  height: 4.16em;
+  background-color:#191743;
+
+}
+#navge #navgea #v-pills-tab button:hover
+{
+box-shadow: -12px 2px 13px 1px #191a1a69;
+background-color: #3291e6;
+border-color: #3291e8;
+border-right: 1px solid #f3f3f3;
+/*background-color: aquamarine;*/
+}
+#navge #navgea #v-pills-tab button:hover .flech::after{
+  list-style: none;
+  content: '';
+  border-top: 10px solid transparent;
+  border-right: 14px solid #f3f3f3;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 0;
+}
+#navge #navgea #v-pills-tabContent{
+  position: relative;
+  color: rgb(0, 0, 0);
+ 
+}
+#navge #navgea #v-pills-tabContent .tab-pane{
+  width: 95%;
+  height:20%;
+  font-family: inherit;
+
+}
+
+#navge #navgea #v-pills-tabContent .tab-pane .img-fluid{
+display: flex;
+margin: auto;
+justify-content: center;
+align-items: center;
+width:35% ;
+}
+
+#header .container #logo  .logo .img-fluid {
+  max-width: 3.7em;
+  height: 2.2em;
+}
+#header .container #logo:hover {
+  box-shadow: 0px 0px 13px 2px #cad2d2c7;
+}
+

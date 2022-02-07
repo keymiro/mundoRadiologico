@@ -18,9 +18,20 @@
     <div class="container d-flex align-items-center">
 <div id="logo" class="me-auto">
 <h1 class="logo ">
+           @php
+            $f=0;
+            @endphp
         @foreach ($info as $i)
             @if($i->category->title=='logo')
-            <a href="{{route('index')}}"> <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid" style="width:200%"></a>
+            @php
+            $f=$f+1;
+            @endphp
+            @if($f==2)
+            <a href="{{route('index')}}"> <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid"></a>
+            @php
+            $f=2;
+            @endphp
+            @endif
             @endif
         @endforeach
        </h1>
@@ -34,7 +45,6 @@
         <ul>
           <li><a class="nav-link scrollto {{request()->is('Inicio')? 'active':'' }}" href="{{route('index')}}">Inicio</a></li>
           <li><a class="nav-link scrollto {{request()->is('Nosotros')? 'active':'' }}" href="{{route('nosotros')}}">Nosotros</a></li>
-          <li><a class="nav-link scrollto {{request()->is('Servicios')? 'active':'' }}" href="{{route('servicios')}}">Servicios</a></li>
           <li class="dropdown"><a href="#"><span>Información al usuario</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   {{-- <li><a href=""></a></li> --}}
@@ -63,11 +73,14 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto {{request()->is('Contacto')? 'active':'' }}" href="{{route('contact')}}">Contacto</a></li>
+          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        
       </nav><!-- .navbar -->
-      <a href="{{route('cita')}}" class="appointment-btn scrollto {{request()->is('Cita')? 'text-info':'' }}"><span class="d-none d-md-inline">Apartar</span> Cita</a>
-      <a href="" class="appointment-btn scrollto " data-bs-toggle="modal" data-bs-target="#encuesta">Paciente</a>
+      <a href="{{route('cita')}}" class="appointment-btn scrollto {{request()->is('Cita')? 'text-info':'' }}"><span class="d-none d-md-inline">Agendar</span> Cita</a>
+      <a href="" class="appointment-btn scrollto " data-bs-toggle="modal" data-bs-target="#encuesta">Resultado Examenes</a>
+      <a href="" class="appointment-btn scrollto "><i class="bi bi-search"> </i>Buscar</a>
     </div>
   </header><!-- End Header -->
 
