@@ -10,8 +10,8 @@
       <div class="container">
                 @foreach ($info as $i)
                 @if($i->category->title=='Nosotros')
-                    <div class="section-title">
-                        <h2><a href="">{{$i->title}}</a></h2>
+                    <div class="section-title" id="Notros">
+                        <h2><a >{{$i->title}}</a></h2>
                     </div>
                 @endif
             @endforeach

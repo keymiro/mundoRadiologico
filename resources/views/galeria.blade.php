@@ -10,7 +10,7 @@
         <div class="container">
 
           <div class="section-title">
-            <h2>Clientes</h2>
+            <h2>Nuestros Aliados</h2>
           </div>
         </div>
 
@@ -22,7 +22,7 @@
                   <div class="col-lg-3 col-md-4">
                       <div class="gallery-item">
                           <a href="{{Storage::url($i->url)}}" class="galelry-lightbox" target="_blank">
-                              <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid">
+                              <img src="{{Storage::url($i->url)}}" alt="" class="img">
                           </a>
                           </div>
                       </div>

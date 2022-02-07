@@ -58,7 +58,7 @@
               <li class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
 
-              <li><a class="{{request()->is('Clientes')? 'active':'' }}" href="{{route('galeria')}}">Clientes</a></li>
+              <li><a class="{{request()->is('Clientes')? 'active':'' }}" href="{{route('galeria')}}">Nuestros Aliados</a></li>
               <li><a class="{{request()->is('Covid-19')? 'active':'' }}" href="{{route('covid')}}">Covid-19</a></li>
               <li><a class="{{request()->is('pqr')? 'active':'' }}" href="{{route('pqr')}}">PQR</a></li>
               <li><a class="{{request()->is('Preguntas-frecuentes')? 'active':'' }}" href="{{route('faq')}}">Preguntas frecuentes</a></li>
@@ -80,7 +80,7 @@
       </nav><!-- .navbar -->
       <a href="{{route('cita')}}" class="appointment-btn scrollto {{request()->is('Cita')? 'text-info':'' }}"><span class="d-none d-md-inline">Agendar</span> Cita</a>
       <a href="" class="appointment-btn scrollto " data-bs-toggle="modal" data-bs-target="#encuesta">Resultado Examenes</a>
-      <a href="" class="appointment-btn scrollto "><i class="bi bi-search"> </i>Buscar</a>
+      <a href="{{route('search')}}" class="appointment-btn scrollto "><i class="bi bi-search"> </i>Buscar</a>
     </div>
   </header><!-- End Header -->
 

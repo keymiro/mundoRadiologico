@@ -119,5 +119,12 @@ class WelcomeController extends Controller
         return back()->with('notification','Mensaje enviado correctamente');
     }
 
-
+    public function  DatosInt(){
+        $info = information::All();
+        return view('inf')->with(compact('info'));
+    }
+    public function  search(){
+        $info = information::All();
+        return view('Bus')->with(compact('info'));
+    }
 }
