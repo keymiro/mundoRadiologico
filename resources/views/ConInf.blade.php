@@ -14,6 +14,22 @@
                                 <div class="section-title">
                                     <h2>CONSENTIMIENTOS INFORMADOS</h2>
                                 </div>
+                                <div class="accordion accordion-flush" id="DatosInteres" >
+@foreach ($info as $inf)
+@if($inf->category->title=='ConsentimientosInformados')
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-heading{{$inf->id}}">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{$inf->id}}" aria-expanded="false" aria-controls="flush-collapseOne">
+      <p>{{$inf->title}}</p>
+      </button>
+    </h2>
+    <div id="flush-collapse{{$inf->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"><p>{!!$inf->descriptionck!!}</p></div>
+    </div>
+  </div>
+ @endif
+@endforeach
+</div>
                     </div>
                 </div>
            </div>

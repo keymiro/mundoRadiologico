@@ -11,25 +11,25 @@
           <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="accordion" id="accordionPanelsStayOpenExample">
-                        @foreach ($info as $i)
-                            @if($i->category->title=='Estados Financieros')
-                                <div class="section-title">
-                                    <h2>{{$i->title}}</h2>
+                    <div class="section-title">
+                                    <h2>Estados Financieros</h2>
                                 </div>
-                                <div class="accordion-item">
-                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                    Mostrar
-                                    </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                                    <div class="accordion-body">
-                                        {!!$i->descriptionck!!}
-                                    </div>
-                                </div>
-                                </div>
-                            @endif
-                        @endforeach
+                    <div class="accordion accordion-flush" id="DatosInteres" >
+@foreach ($info as $EF)
+@if($EF->category->title=='Estadosfinancieros')
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-heading{{$EF->id}}">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{$EF->id}}" aria-expanded="false" aria-controls="flush-collapseOne">
+      <p>{{$EF->title}}</p>
+      </button>
+    </h2>
+    <div id="flush-collapse{{$EF->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"><p>{!!$EF->descriptionck!!}</p></div>
+    </div>
+  </div>
+ @endif
+@endforeach
+</div>
                     </div>
                 </div>
            </div>

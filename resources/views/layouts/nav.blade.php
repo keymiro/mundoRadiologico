@@ -16,6 +16,9 @@
     <script src="{{ asset('js/assets/vendor/php-email-form/validate.js') }}" defer></script>
     <script src="{{asset('js/assets/vendor/purecounter/purecounter.js')}}" defer></script>
     <script src="{{asset('js/assets/vendor/swiper/swiper-bundle.min.js')}}" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="{{ asset('js/prom.js') }}" defer></script>
 
     <!-- Template Main JS File -->
     <script src="{{asset('js/assets/main.js')}}" defer></script>

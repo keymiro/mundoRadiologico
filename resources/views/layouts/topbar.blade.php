@@ -46,30 +46,21 @@
           <li><a class="nav-link scrollto {{request()->is('Inicio')? 'active':'' }}" href="{{route('index')}}">Inicio</a></li>
           <li><a class="nav-link scrollto {{request()->is('Nosotros')? 'active':'' }}" href="{{route('nosotros')}}">Nosotros</a></li>
           <li class="dropdown"><a href="#"><span>Información al usuario</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                  {{-- <li><a href=""></a></li> --}}
-                  <li><a class="{{request()->is('PQRS')? 'active':'' }}" href="{{route('pqrs')}}">PQRS</a></li>
-                  <li><a class="{{request()->is('Derechos-y-deberes')? 'active':'' }}" href="{{route('dd')}}">Derechos y deberes</a></li>
-                  <li><a class="{{request()->is('Consentimientos Informados')? 'active':'' }}" href="{{route('ConInf')}}">Consentimientos informados</a></li>
-                  <li><a class="{{request()->is('PrDG')? 'active':'' }}" href="{{route('PrDG')}}">Preparaciones para examenes diagnosticos</a></li>
+                <ul id="InfU">
+                  <li><a class="{{request()->is('PQRS')? 'active':'' }}" href="{{route('pqrs')}}"> <img src="image/6.png" alt="Pqrs">PQRS</a></li>
+                  <li><a class="{{request()->is('Derechos-y-deberes')? 'active':'' }}" href="{{route('dd')}}"> <img src="image/5.png" alt="Derechos">  Derechos y deberes</a></li>
+                  <li><a class="{{request()->is('Consentimientos Informados')? 'active':'' }}" href="{{route('ConInf')}}"> <img src="image/7.png" alt="Consentimientos"> Consentimientos informados</a></li>
+                  <li><a class="{{request()->is('PrDG')? 'active':'' }}" href="{{route('PrDG')}}">  <img src="image/8.png" alt="Preparaciones"> Preparaciones para examenes diagnosticos</a></li>
                 </ul>
               </li>
           {{-- <li><a class="nav-link scrollto" href="#departments">Área</a></li> --}}
               <li class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-
-              <li><a class="{{request()->is('Clientes')? 'active':'' }}" href="{{route('galeria')}}">Nuestros Aliados</a></li>
-              <li><a class="{{request()->is('Covid-19')? 'active':'' }}" href="{{route('covid')}}">Covid-19</a></li>
-              <li><a class="{{request()->is('pqr')? 'active':'' }}" href="{{route('pqr')}}">PQR</a></li>
-              <li><a class="{{request()->is('Preguntas-frecuentes')? 'active':'' }}" href="{{route('faq')}}">Preguntas frecuentes</a></li>
-              <li><a class="{{request()->is('Estados Fianancieros')? 'active':'' }}" href="{{route('finan')}}">Estados financieros</a></li>
-                         {{-- @foreach ($info as $i)
-                                @if($i->category->title=='Estado situación financiera')
-                                    <a href="{{Storage::url($i->url)}}">Estado situación financiera</a>
-                                @endif
-                            @endforeach --}}
-              </li>
-              <li><a class="{{request()->is('Trabaja Con Nosotros')? 'active':'' }}" href="{{route('TrabNos')}}">Trabaja con nosotros</a></li>
+            <ul id="Mas">
+              <li><a class="{{request()->is('Clientes')? 'active':'' }}" href="{{route('galeria')}}"> <img src="image/9.png" alt="Aliados"> Nuestros Aliados</a></li>
+              <li><a class="{{request()->is('Covid-19')? 'active':'' }}" href="{{route('covid')}}"> <img src="image/10.png" alt="Covid-19">Covid-19</a></li>
+              <li><a class="{{request()->is('Preguntas-frecuentes')? 'active':'' }}" href="{{route('faq')}}" > <img src="image/11.png" alt="Preguntas frecuentes">Preguntas frecuentes</a></li>
+              <li><a class="{{request()->is('Trabaja Con Nosotros')? 'active':'' }}" href="{{route('TrabNos')}}">  <img src="image/12.png" alt="Trabaje con nosostros"> Trabaja con nosotros</a></li>
+              <li><a class="{{request()->is('Estados Fianancieros')? 'active':'' }}" href="{{route('finan')}}"> <img src="image/13.png" alt="Estados financieros">Estados financieros</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto {{request()->is('Contacto')? 'active':'' }}" href="{{route('contact')}}">Contacto</a></li>
@@ -168,11 +159,11 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"> Resultados Paciente</h5>
+          <a href="" id="MImagPatien"> <img src="image/14.png" alt="Resultados"> Resultados Paciente</a>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-         <a href="">Imagenes</a>
+         <a href="http://181.59.255.131/patientportal/" id="MImagPatien"> <img src="image/15.png" alt="Imagenes"> Imagenes</a>
         </br>
          <a href="">Reportes</a>
         </div>
