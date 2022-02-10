@@ -3,12 +3,8 @@
 @section('content')
  <!-- ======= Top Bar ======= -->
   @include('layouts.topbar')
-<!-- ModalPrincipal -->
-  @include('layouts.prom')
 <!-- carousel Princiapl -->
-<section>
   @include('layouts.carouselp')
-</section>
 <!-- Menu de servicios -->
   @include('layouts.menug')
 <!-- Menu cubo-->
@@ -27,6 +23,8 @@
   </main><!-- End #main -->
   @include('layouts.footer')
   <!-- ======= Footer ======= -->
+  <!-- ModalPrincipal -->
+  @include('layouts.prom')
 @endsection
 
 
