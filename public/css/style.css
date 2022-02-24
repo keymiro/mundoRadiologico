@@ -337,19 +337,126 @@ margin: 0px;
 /*####################*/
 /*TRABAJA CON NOSOTROS*/
 #Trbaje{
-  background-color: #1977cc;
+  background-color: #0000dfe8;
   box-shadow: 0px 3px 10px 0px #3291e8;
   border-radius: 1em;
   padding: 18px;
 }
 #Trbaje:hover{
-  background-color: #074b8688;
-  box-shadow: 0px 3px 10px 0px #080808;
+  background-color: #063d6f;
+  box-shadow: 0px 1px 6px 2px #000000a8;
   transition: all 0.6s ease-out;
 
 }
 
-
 /*####################*/
 /*BARRA DE  NAVEGACION*/
 /*####################*/
+/*Menu Infomracion al usuario*/
+#navbar #InfUser  #InfU {
+  display: flex;
+  position: absolute;
+  left: -270%;
+  width: 80.6em;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 0px;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  color: #fff !important;
+  transition: 0.3s;
+  background-color: #4e1bffbf;
+  box-shadow: 0px 0px 13px 2px #000000c7;
+  word-wrap: break-word;
+}
+#navbar #InfUser:hover > #InfU  {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+#navbar #InfUser  #InfU li{ 
+  position: relative;
+  display: block;
+  margin-right: 2%;
+  width: 11em;
+  text-align: center;
+  margin-left: 2%;  
+}
+
+#navbar #InfUser #InfU li a { 
+  display: block;
+  color: rgb(255, 255, 255) ;
+  }
+
+  #navbar #InfUser #InfU li a span{ 
+
+ 
+    }
+
+#navbar #InfUser #InfU  li a:hover  { 
+    transition: all 0.5s ease-out;
+    -moz-transform : scale(1.1); /* Firefox */
+    -webkit-transform : scale(1.1); /* Chrome - Safari */
+    -o-transform : scale(1.1); /* Opera */
+    -ms-transform : scale(1.1); /* IE9 */
+    }
+  
+    #navbar #InfUser #InfU li a  img{ 
+      color: rgb(255, 255, 255) ;
+  width: 2.5em;
+  padding-right: 2px;
+      }
+/*####################*/
+    /*Menu Mas*/
+/*####################*/
+#navbar #InfMas #Mas {
+  display: flex;
+  position: absolute;
+  left: -1000%;
+  width: 83.6em;
+  margin: 0;
+  padding: 0px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  color: #fff !important;
+  transition: 0.3s;
+  background-color: #4e1bffbf;
+  box-shadow: 0px 0px 13px 2px #000000c7;
+}
+
+#navbar #InfMas:hover > #Mas  {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+#navbar #InfMas  #Mas li{ 
+  position: relative;
+  display: block;
+  margin-left: 1%;
+  right: -2%;
+  width: 11em;
+  text-align: center;
+  left: auto;
+  margin-right: 1%;
+  }
+  #navbar #InfMas  #Mas li a { 
+  display: block;
+  color: rgb(255, 255, 255) ;  
+}
+
+#navbar #InfMas  #Mas li a:hover  { 
+  transition: all 0.5s ease-out;
+  -moz-transform : scale(1.2); /* Firefox */
+  -webkit-transform : scale(1.2); /* Chrome - Safari */
+  -o-transform : scale(1.2); /* Opera */
+  -ms-transform : scale(1.2); /* IE9 */
+}
+#navbar #InfMas #Mas li a  img{ 
+  color: rgb(255, 255, 255) ;
+  width: 2.5em;
+  padding-right: 2px;
+}

@@ -26,17 +26,16 @@
         <ul>
           <li><a class="nav-link scrollto {{request()->is('Inicio')? 'active':'' }}" href="{{route('index')}}">Inicio</a></li>
           <li><a class="nav-link scrollto {{request()->is('Nosotros')? 'active':'' }}" href="{{route('nosotros')}}">Nosotros</a></li>
-          <li class="dropdown"><a href="#"><span>Información al usuario</span> <i class="bi bi-chevron-down"></i></a>
+          <li id="InfUser" class="dropdown"><a href="#"><span>Información al usuario</span> <i class="bi bi-chevron-down"></i></a>
                 <ul id="InfU">
-                  <li><a class="{{request()->is('PQRS')? 'active':'' }}" href="{{route('pqrs')}}"> <img src="image/6.png" alt="Pqrs">PQRS</a></li>
-                  <li><a class="{{request()->is('Derechos-y-deberes')? 'active':'' }}" href="{{route('dd')}}"> <img src="image/5.png" alt="Derechos">  Derechos y deberes</a></li>
-                  <li><a class="{{request()->is('Consentimientos Informados')? 'active':'' }}" href="{{route('ConInf')}}"> <img src="image/7.png" alt="Consentimientos"> Consentimientos informados</a></li>
-                  <li><a class="{{request()->is('PrDG')? 'active':'' }}" href="{{route('PrDG')}}">  <img src="image/8.png" alt="Preparaciones"> Preparaciones para examenes diagnosticos</a></li>
+                  <li><a class="{{request()->is('PQRS')? 'active':'' }}" href="{{route('pqrs')}}"> <img src="image/6.png" alt="Pqrs"><span>PQRS</span></a></li>
+                  <li><a class="{{request()->is('Derechos-y-deberes')? 'active':'' }}" href="{{route('dd')}}"> <img src="image/5.png" alt="Derechos">  <span>Derechos y deberes</span></a></li>
+                  <li><a class="{{request()->is('Consentimientos Informados')? 'active':'' }}" href="{{route('ConInf')}}"> <img src="image/7.png" alt="Consentimientos"> <span>Consentimientos informados</span></a></li>
+                  <li><a class="{{request()->is('PrDG')? 'active':'' }}" href="{{route('PrDG')}}">  <img src="image/8.png" alt="Preparaciones"><span>Preparaciones para examenes diagnosticos</span> </a></li>
                 </ul>
-              </li>
-          {{-- <li><a class="nav-link scrollto" href="#departments">Área</a></li> --}}
-              <li class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down"></i></a>
-            <ul id="Mas">
+          </li>
+          <li id="InfMas" class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down"></i></a>
+          <ul id="Mas">
               <li><a class="{{request()->is('Clientes')? 'active':'' }}" href="{{route('galeria')}}"> <img src="image/9.png" alt="Aliados"> Nuestros Aliados</a></li>
               <li><a class="{{request()->is('Covid-19')? 'active':'' }}" href="{{route('covid')}}"> <img src="image/10.png" alt="Covid-19">Covid-19</a></li>
               <li><a class="{{request()->is('Preguntas-frecuentes')? 'active':'' }}" href="{{route('faq')}}" > <img src="image/11.png" alt="Preguntas frecuentes">Preguntas frecuentes</a></li>
