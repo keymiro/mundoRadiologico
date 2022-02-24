@@ -1,46 +1,27 @@
-<div id="topbar" class="d-flex align-items-center fixed-top">
+<div id="topbar" class="d-flex align-items-center fixed-top" >
     <div class="container d-flex justify-content-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto: Mundoradiologico@gmail.com">Mundoradiologico@gmail.com</a>
-        {{-- <i class="bi bi-phone"></i> Tel (8) 633 3216 --}}
-      </div>
-      <div class="d-none d-lg-flex social-links align-items-center">
-        <a href="{{route('login')}}">Ingresar</a>
-        <a href="https://www.instagram.com/mundoradiologicosas/" class="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.facebook.com/mundoradiologico/" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.youtube.com/channel/UCJslrQjl32e3U5e1zkaYnsg"><i class="bi bi-youtube"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-<div id="logo" class="me-auto">
-<h1 class="logo ">
-           @php
-            $f=0;
-            @endphp
-        @foreach ($info as $i)
-            @if($i->category->title=='logo')
-            @php
-            $f=$f+1;
-            @endphp
-            @if($f==2)
-            <a href="{{route('index')}}"> <img src="{{Storage::url($i->url)}}" alt="" class="img-fluid"></a>
-            @php
-            $f=2;
-            @endphp
+      <!--Logo-->
+      <div id="logo" class="me-auto">
+        <h1 class="logo ">
+          @php
+            $lg=0;
+          @endphp
+          @foreach ($info as $l)
+            @if($l->category->title=='logo')
+              @php
+                $lg=$lg+1;
+              @endphp
+              @if($lg==2)
+                <a href="{{route('index')}}"> <img src="{{Storage::url($l->url)}}" alt="LogoEmpresarial" class="img-fluid"></a>
+                @php
+                  $lg=2;
+                @endphp
+              @endif
             @endif
-            @endif
-        @endforeach
-       </h1>
-</div>
-
-
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+          @endforeach
+        </h1>
+      </div>
+      <!--Inicio del navbar-->
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto {{request()->is('Inicio')? 'active':'' }}" href="{{route('index')}}">Inicio</a></li>
@@ -64,18 +45,24 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto {{request()->is('Contacto')? 'active':'' }}" href="{{route('contact')}}">Contacto</a></li>
-          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-        
-      </nav><!-- .navbar -->
-      <a href="{{route('cita')}}" class="appointment-btn scrollto {{request()->is('Cita')? 'text-info':'' }}"><span class="d-none d-md-inline">Agendar</span> Cita</a>
-      <a href="" class="appointment-btn scrollto " data-bs-toggle="modal" data-bs-target="#encuesta">Resultado Examenes</a>
-      <a href="{{route('search')}}" class="appointment-btn scrollto "><i class="bi bi-search"> </i>Buscar</a>
-    </div>
-  </header><!-- End Header -->
-
-  <div class="modal fade" id="encuesta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!--Botones Azules-->
+        <div id="NavBott">
+          <a href="{{route('cita')}}" class="appointment-btn scrollto {{request()->is('Cita')? 'text-info':'' }}"><span class="d-none d-md-inline">Agendar</span> Cita</a>
+          <a href="" class="appointment-btn scrollto " data-bs-toggle="modal" onclick="miFunc()" data-bs-target="#encuesta">Resultado Examenes</a>
+          <a href="{{route('search')}}" class="appointment-btn scrollto "><i class="bi bi-search"> </i>Buscar</a>
+        </div>
+      </nav>
+    <!--Ingreso y redes sociales-->
+      <div class="d-none d-lg-flex social-links align-items-center" id="SocialR">
+        <a href="{{route('login')}}">Ingresar</a>
+        <a href="https://www.instagram.com/mundoradiologicosas/" class="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/mundoradiologico/" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.youtube.com/channel/UCJslrQjl32e3U5e1zkaYnsg"><i class="bi bi-youtube"></i></a>
+      </div>
+    <!--Encuesta de satisfacción-->
+    <div class="modal fade" id="encuesta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -86,6 +73,8 @@
           <form action="{{route('encuesasti')}}" method="POST">
             @csrf
               <p>
+                <span style=" text-align: center;">Diligencia la siguiente encuesta para reclamar sus resultados:</span><br>
+                <br>
                 ¿Cómo calificaría su experiencia global respecto a los servicios de salud que ha recibido a través de su IPS?
               </p>
             <div class="form-check">
@@ -147,29 +136,15 @@
               </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paciente">Enviar</button>
+          <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paciente">Siguiente</button>
         </div>
     </form>
       </div>
     </div>
   </div>
-
-  <div class="modal fade" id="paciente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <a href="" id="MImagPatien"> <img src="image/14.png" alt="Resultados"> Resultados Paciente</a>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         <a href="http://181.59.255.131/patientportal/" id="MImagPatien"> <img src="image/15.png" alt="Imagenes"> Imagenes</a>
-        </br>
-         <a href="">Reportes</a>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
+    <!--########################-->
     </div>
   </div>
+  
+
+

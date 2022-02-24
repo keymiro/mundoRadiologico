@@ -10,12 +10,12 @@
 @if($x->category->title=='Fotos')
   @if($r==1)
     <div class="carousel-item active" data-bs-interval="5000">
-      <img src="{{Storage::url($x->url)}}" class="d-block w-100" alt="">
+      <img src="{{Storage::url($x->url)}}" class="d-block w-100" id="carImg" alt="">
     </div>
   @endif
   @if($r>1)
     <div class="carousel-item" data-bs-interval="5000">
-      <img src="{{Storage::url($x->url)}}" class="d-block w-100" alt="...">
+      <img src="{{Storage::url($x->url)}}" class="d-block w-100" id="carImg" alt="...">
     </div>
     @endif
 @php
