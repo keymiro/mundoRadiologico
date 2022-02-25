@@ -460,3 +460,24 @@ margin: 0px;
   width: 2.5em;
   padding-right: 2px;
 }
+/*####################*/
+/*SUbmenude paciente*/
+/*####################*/
+#MImagPatien{
+  color: #020202;
+}
+
+#MImagPatien img{
+width: 3em;
+}
+#MImagPatien:hover{
+  color: #ffffff;
+  padding: 1em;
+  background-color: #104777b9;
+  transition: all 0.5s ease-out;
+  -moz-transform : scale(1.1); /* Firefox */
+  -webkit-transform : scale(1.1); /* Chrome - Safari */
+  -o-transform : scale(1.1); /* Opera */
+  -ms-transform : scale(1.1); /* IE9 */
+  border-radius:35px;
+  }

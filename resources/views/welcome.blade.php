@@ -33,6 +33,8 @@
   <div id="Footer">
   @include('layouts.footer')
   </div>
-
+  <!--###################################-->
+  <!-- ModalPrincipal -->
+  @include('layouts.prom')
 <!--###################################-->
 @endsection
