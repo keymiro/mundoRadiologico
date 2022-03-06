@@ -52,6 +52,16 @@ body {
     color: #fff;
     background-color: #070733ba !important;
 }
+.btn-morado {
+    color: #fff;
+    background-color:  #2f2f7eba !important;
+    border-color:   #2f2f7eba  !important;
+}
+.btn-morado:hover {
+    color: #fff;
+    background-color:  #070733ba !important;
+    border-color:  #070733ba !important;
+}
 </style>
 </head>
 <body>

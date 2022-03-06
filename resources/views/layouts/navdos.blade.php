@@ -16,7 +16,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown
           </a>
-          <div class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu shadow fade" aria-labelledby="navbarDropdown">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <a role="button" class="btn btn-light">Left</a>
                 <a role="button" class="btn btn-light">Middle</a>
