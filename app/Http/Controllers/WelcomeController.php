@@ -35,7 +35,7 @@ class WelcomeController extends Controller
 
    public function welcome(){
        $info = information::All();
-       return view('welcome')->with(compact('info'));
+       return view('template')->with(compact('info'));
    }
 
    public function nosotros(){
