@@ -19,44 +19,47 @@
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h3> @foreach ($info as $i)
-                    @if($i->category->title=='Nosotros')
-                    <p class="text-center">{{$i->description}}</p>
-                    @endif
-                 @endforeach
-            </h3>
-          {{-- <p></p> --}}
+              <div class="card">
+                  <div class="card-body">
+                    <h3> @foreach ($info as $i)
+                        @if($i->category->title=='Nosotros')
+                        <p class="text-center">{{$i->description}}</p>
+                        @endif
+                    @endforeach
+                </h3>
+            {{-- <p></p> --}}
 
-            <div class="icon-box">
-                @foreach ($info as $i)
-                    @if($i->category->title=='Política de Calidad')
+                <div class="icon-box">
+                    @foreach ($info as $i)
+                        @if($i->category->title=='Política de Calidad')
+                            <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
+                            <h4 class="title"><strong> <a href="" class="text-dark">{{$i->title}}</a></strong></h4>
+                            <p class="description">{{$i->description}}</p>
+                        @endif
+                    @endforeach
+                </div>
+
+                <div class="icon-box">
+                    @foreach ($info as $i)
+                        @if($i->category->title=='Nuestra Misión')
                         <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
-                        <h4 class="title"><a href="">{{$i->title}}</a></h4>
-                        <p class="description">{{$i->description}}</p>
-                    @endif
-                @endforeach
-            </div>
+                        <h4 class="title"><strong> <a href="" class="text-dark">{{$i->title}}</a></strong></h4>
+                            <p class="description">{{$i->description}}</p>
+                        @endif
+                    @endforeach
+                </div>
 
-            <div class="icon-box">
-                @foreach ($info as $i)
-                    @if($i->category->title=='Nuestra Misión')
-                    <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
-                        <h4 class="title"><a href="">{{$i->title}}</a></h4>
-                        <p class="description">{{$i->description}}</p>
-                    @endif
-                @endforeach
-            </div>
-
-            <div class="icon-box">
-                @foreach ($info as $i)
-                    @if($i->category->title=='Nuestra Visión')
-                        <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
-                        <h4 class="title"><a href="">{{$i->title}}</a></h4>
-                        <p class="description">{{$i->description}}</p>
-                    @endif
-                @endforeach
-            </div>
-
+                <div class="icon-box">
+                    @foreach ($info as $i)
+                        @if($i->category->title=='Nuestra Visión')
+                            <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
+                            <h4 class="title"><strong> <a href="" class="text-dark">{{$i->title}}</a></strong></h4>
+                            <p class="description">{{$i->description}}</p>
+                        @endif
+                    @endforeach
+                </div>
+                  </div>
+              </div>
           </div>
         </div>
 
