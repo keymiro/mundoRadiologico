@@ -1,3 +1,11 @@
+<nav class="navbar navbar-light align-items-start bg-light">
+    <div class="row ml-auto">
+        <a class="text-dark mx-4" href="#">Ingresar  <i class="fas fa-sign-in-alt"></i></a>
+        <a class="text-dark mx-4" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="text-dark mx-4" href="#"><i class="fab fa-facebook"></i></a>
+        <a class="text-dark mx-4" href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+</nav>
 <nav class="navbar navbar-expand-lg navbar-dark bg-blue shadow">
     <a class="navbar-brand" href="#">
         @foreach ($info as $l)
@@ -9,7 +17,6 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active mx-2">
