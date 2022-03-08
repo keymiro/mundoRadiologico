@@ -32,7 +32,7 @@
                 <div class="icon-box">
                     @foreach ($info as $i)
                         @if($i->category->title=='Política de Calidad')
-                            <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
+                            <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt="" width="130" height="130"></div>
                             <h4 class="title"><strong> <a href="" class="text-dark">{{$i->title}}</a></strong></h4>
                             <p class="description">{{$i->description}}</p>
                         @endif
@@ -42,7 +42,7 @@
                 <div class="icon-box">
                     @foreach ($info as $i)
                         @if($i->category->title=='Nuestra Misión')
-                        <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
+                        <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt="" width="130" height="130"></div>
                         <h4 class="title"><strong> <a href="" class="text-dark">{{$i->title}}</a></strong></h4>
                             <p class="description">{{$i->description}}</p>
                         @endif
@@ -52,7 +52,7 @@
                 <div class="icon-box">
                     @foreach ($info as $i)
                         @if($i->category->title=='Nuestra Visión')
-                            <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt=""></div>
+                            <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt="" width="130" height="130"></div>
                             <h4 class="title"><strong> <a href="" class="text-dark">{{$i->title}}</a></strong></h4>
                             <p class="description">{{$i->description}}</p>
                         @endif
