@@ -14,4 +14,5 @@
             @include('layouts.resultandmap')
     </div>
 </div>
+@include('layouts.prom')
 @endsection
