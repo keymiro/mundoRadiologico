@@ -14,11 +14,11 @@
             @endforeach
         <div class="row">
 
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center row align-items-center position-relative">
-                 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VGlyOMhheW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+          <div class="col-xl-6 col-lg-6 video-box d-flex justify-content-center row align-items-center position-relative">
+                 <iframe width="560" height="800" src="https://www.youtube-nocookie.com/embed/VGlyOMhheW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
           </div>
 
-          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+          <div class="col-xl-6 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
               <div class="card">
                   <div class="card-body">
                     <h3> @foreach ($info as $i)
@@ -32,7 +32,7 @@
                 <div class="icon-box">
                     @foreach ($info as $i)
                         @if($i->category->title=='Política de Calidad')
-                            <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt="" width="130" height="130"></div>
+                            <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt="" width="80" height="80"></div>
                             <h4 class="title"><strong> <a href="" class="text-dark">{{$i->title}}</a></strong></h4>
                             <p class="description">{{$i->description}}</p>
                         @endif
@@ -42,7 +42,7 @@
                 <div class="icon-box">
                     @foreach ($info as $i)
                         @if($i->category->title=='Nuestra Misión')
-                        <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt="" width="130" height="130"></div>
+                        <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt="" width="80" height="80"></div>
                         <h4 class="title"><strong> <a href="" class="text-dark">{{$i->title}}</a></strong></h4>
                             <p class="description">{{$i->description}}</p>
                         @endif
@@ -52,7 +52,7 @@
                 <div class="icon-box">
                     @foreach ($info as $i)
                         @if($i->category->title=='Nuestra Visión')
-                            <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt="" width="130" height="130"></div>
+                            <div class="icon"><img src="{{Storage::url($i->url)}}" class="img-fluid" alt="" width="80" height="80"></div>
                             <h4 class="title"><strong> <a href="" class="text-dark">{{$i->title}}</a></strong></h4>
                             <p class="description">{{$i->description}}</p>
                         @endif
