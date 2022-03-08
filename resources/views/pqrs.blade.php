@@ -1,9 +1,7 @@
-@extends('layouts.nav')
+@extends('template')
 
 @section('content')
- <!-- ======= Top Bar ======= -->
- @include('layouts.topbar')
-</br></br></br></br>
+
   <main id="main">
 <section id="dd" class="testimonials">
     <div class="container">
@@ -16,10 +14,10 @@
                             <strong> <i class="fas fa-check-circle"></i> {{ session('notification') }}</strong>
                         </div>
                         @endif
-                                <div class="section-title">
+                                <div class="section-title text-center">
                                     <h2>PQRS</h2>
                                 </div>
-                                <div class="card">
+                                <div class="card my-4">
                                     <div class="card-body">
                                         <form class="row g-3" method="POST" action="{{route('pqrSend')}}">
                                             @csrf
@@ -80,7 +78,5 @@
     </div>
 </section><!-- End Testimonials Section -->
   </main>
- @include('layouts.footer')
-
 @endsection
 

@@ -1,9 +1,5 @@
-@extends('layouts.nav')
-
+@extends('template')
 @section('content')
- <!-- ======= Top Bar ======= -->
- @include('layouts.topbar')
-</br></br></br></br>
   <main id="main">
 <section id="dd" class="testimonials">
     <div class="container">
@@ -11,8 +7,8 @@
           <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="accordion" id="accordionPanelsStayOpenExample">
-                                <div class="section-title">
-                                    <h2>CONSENTIMIENTOS INFORMADOS</h2>
+                                <div class="section-title text-center">
+                                    <h2>Consentimiento Informados</h2>
                                 </div>
                                 <div class="accordion accordion-flush" id="DatosInteres" >
 @foreach ($info as $inf)
@@ -37,6 +33,5 @@
     </div>
 </section><!-- End Testimonials Section -->
   </main>
- @include('layouts.footer')
 @endsection
 

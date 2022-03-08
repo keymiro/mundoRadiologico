@@ -1,9 +1,6 @@
-@extends('layouts.nav')
+@extends('template')
 
 @section('content')
- <!-- ======= Top Bar ======= -->
- @include('layouts.topbar')
-</br></br></br></br>
   <main id="main">
 <section id="dd" class="testimonials">
     <div class="container">
@@ -11,7 +8,7 @@
           <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="accordion" id="accordionPanelsStayOpenExample">
-                                <div class="section-title">
+                                <div class="section-title text-center">
                                     <h2>Preparaciones Para Examenes Diagnosticos</h2>
                                 </div>
                                 <div class="accordion accordion-flush" id="DatosInteres" >
@@ -37,7 +34,5 @@
     </div>
 </section><!-- End Testimonials Section -->
   </main>
- @include('layouts.footer')
-
 @endsection
 

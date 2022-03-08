@@ -1,36 +1,36 @@
-@extends('layouts.nav')
+@extends('template')
 
 @section('content')
- <!-- ======= Top Bar ======= -->
- @include('layouts.topbar')
-</br></br></br></br>
   <main id="main">
      <!-- ======= Frequently Asked Questions Section ======= -->
      <section id="faq" class="faq section-bg">
         <div class="container">
 
-          <div class="section-title">
+          <div class="section-title text-center">
             <h2>Preguntas frecuentes</h2>
           </div>
-          <div class="faq-list">
-            <ul>
-              @foreach ($info as $i)
-                   @if($i->category->title=='preguntas')
-                      <li data-aos="fade-up">
-                          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#{{$i->description}}">{{$i->title}}<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                              <div id="{{$i->description}}" class="collapse" data-bs-parent=".faq-list">
-                                  <p>{!!$i->descriptionck!!}</p>
-                              </div>
-                      </li>
-                  @endif
-              @endforeach
-            </ul>
-          </div>
+          <div class="accordion" id="accordionExample">
+            @foreach ($info as $i)
+            @if($i->category->title=='preguntas')
+            <div class="card my-4">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left text-dark" type="button" data-toggle="collapse" data-target="#{{$i->description}}" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-question-circle"></i> {{$i->title}}
+                  </button>
+                </h2>
+              </div>
 
+              <div id="{{$i->description}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <p>{!!$i->descriptionck!!}</p>
+                </div>
+              </div>
+            </div>
+            @endif
+            @endforeach
+          </div>
         </div>
       </section><!-- End Frequently Asked Questions Section -->
     </main>
-  <!-- ======= Footer ======= -->
- @include('layouts.footer')
-
-@endsection
+ @endsection

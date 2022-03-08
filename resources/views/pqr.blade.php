@@ -1,9 +1,6 @@
-@extends('layouts.nav')
+@extends('template')
 
 @section('content')
- <!-- ======= Top Bar ======= -->
- @include('layouts.topbar')
-</br></br></br></br>
   <main id="main">
 <section id="dd" class="testimonials">
     <div class="container">

@@ -1,19 +1,16 @@
-@extends('layouts.nav')
+@extends('template')
 
 @section('content')
- <!-- ======= Top Bar ======= -->
- @include('layouts.topbar')
-</br></br></br></br>
   <main id="main">
  <!-- ======= Appointment Section ======= -->
- <section id="appointment" class="appointment section-bg">
+ <section id="appointment" class="appointment section-bg m-4">
     <div class="container">
         @if(session('notification'))
         <div class="sent-message">
             <strong> <i class="fas fa-check-circle"></i> {{ session('notification') }}</strong>
         </div>
         @endif
-      <div class="section-title">
+      <div class="section-title text-center my-4">
         <h2>Aparta una cita</h2>
       </div>
 
@@ -87,6 +84,4 @@
     </div>
   </section><!-- End Appointment Section -->
   </main>
- @include('layouts.footer')
-
 @endsection

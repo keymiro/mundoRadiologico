@@ -1,17 +1,14 @@
-@extends('layouts.nav')
+@extends('template')
 
 @section('content')
- <!-- ======= Top Bar ======= -->
- @include('layouts.topbar')
-</br></br></br></br>
   <main id="main">
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
                 @foreach ($info as $i)
                 @if($i->category->title=='Nosotros')
-                    <div class="section-title" id="Notros">
-                        <h2><a >{{$i->title}}</a></h2>
+                    <div class="text-center">
+                        <h2><a>{{$i->title}}</a></h2>
                     </div>
                 @endif
             @endforeach
@@ -66,8 +63,4 @@
       </div>
     </section><!-- End About Section -->
   </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
- @include('layouts.footer')
-
 @endsection

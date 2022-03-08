@@ -68,25 +68,12 @@ body {
 @include('layouts.navdos')
 <section class="py-5 header">
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-7 my-4">
-            @include('layouts.navtab')
-        </div>
-        <div class="col-sm-3">
-                    @include('layouts.sliderone')
-                    <br>
-                    @include('layouts.slidertwo')
-        </div>
-        <div class="col">
-                @include('layouts.resultandmap')
-        </div>
-
-    </div>
+    @yield('content')
 </div>
 </section>
 <footer>
-        <div class="card-footer text-white bg-secondary text-center">
-           <small> © Copyright Mundoradiologico. All Rights Reserved</small>
+        <div class="card-footer text-dark bg-light fixed-bottom">
+            <center> <small> © Copyright Mundoradiologico. All Rights Reserved</small></center>
         </div>
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
