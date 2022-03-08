@@ -10,7 +10,7 @@
     <a class="navbar-brand" href="#">
         @foreach ($info as $l)
             @if($l->category->title=='logo')
-                <a href="{{route('index')}}"> <img src="{{Storage::url($l->url)}}"  width="130" height="90" class="d-inline-block align-top img-fluid btn btn-outline-light rounded" style="border: 0;"></a>
+                <a href="{{route('index')}}"> <img src="{{Storage::url($l->url)}}"  width="100" height="60" class="d-inline-block align-top img-fluid btn btn-outline-light rounded" style="border: 0;"></a>
             @endif
         @endforeach
     </a>
