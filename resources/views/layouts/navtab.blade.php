@@ -2,7 +2,7 @@
   $e=1;
   $f=1;
 @endphp
-<div class="container py-4">
+<div class="container">
     <div class="row">
         <div class="col-md-3">
     <!-- Tabs nav -->

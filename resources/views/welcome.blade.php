@@ -2,7 +2,7 @@
 @extends('template')
 @section('content')
 <div class="row">
-    <div class="col-sm-7 my-4">
+    <div class="col-sm-7">
         @include('layouts.navtab')
     </div>
     <div class="col-sm-3">
