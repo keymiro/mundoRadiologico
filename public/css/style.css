@@ -2,7 +2,16 @@ body {
   background:url(../image/2.png);
   background-size: cover;
   background-repeat: no-repeat;
-background-color:rgba(145, 153, 227, 0.13)
+background-color:rgba(145, 153, 227, 0.13);
+}
+
+.card-footer
+{
+  background-color: #f8f9fa1c !important;
+}
+#FullData{
+  position: absolute;
+top: 6em;
 }
 a {
   color: #ffffff;
@@ -14,75 +23,98 @@ a:hover {
   text-decoration: none;
 
 }
-/*Donde esta el logo*/
-#topbar{
-  background-color: #070733ba;
-  width: 88.5%;
-  left: 11.2em;
-  top: 1px;
-}
 
-#topbar #logo{
+#DatosgeneralInf #v-pills-tabContent:hover{
+overflow: auto;
+}
+ 
+#Log img{
+  background-color:rgb(240, 241, 251);
   position: absolute;
-  max-width: 9.7em;
-  height: 2.2em;
-  left: -10.5em;
-  top: 1em;
-  margin-left: 9px;
+  left: 0em;
+  top: -3.2em;
+  width: 60%;
+  padding: 0.3em;
 }
 
-#topbar #logo:hover {
-  transition: all 0.6s ease-out;
-  -moz-transform : scale(1.1); /* Firefox */
-  -webkit-transform : scale(1.1); /* Chrome - Safari */
-  -o-transform : scale(1.1); /* Opera */
-  -ms-transform : scale(1.1); /* IE9 */
-}
-/*Menu general azul, es quien tiene los items*/
-#navbar{
-  position: absolute;
-  padding: 0;
-  right: 4em;
-  bottom: -4px;
+#Soc{
+margin: 0em;
 }
 
-
-/*Botones azules del menu general*/
-#NavBott{
-  display: -webkit-box;
-
-}
-#NavBott .appointment-btn {
-padding: 1%;
-margin-left: 5px;
-margin-right: 5px;
-border-bottom: #1977cc 1px solid;
+#Soc1{
+  padding: 0em;
+  margin-top: 0em !important;
 }
 
-/*Redes sociales*/
-#SocialR{
-bottom: -2em;
-position: absolute;
-right: 44px;
-font-size: 1.5em;
+#v-pills-tabContent{
+background-color:rgb(255, 255, 255);
+overflow: auto;
+height: 97%;
+font-size: 15px;
 }
+#v-pills-tabContent img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ width: 10em;
+}
+#res{
+  width: 57%;
+}
+#resul{
+  position: relative;
+  top: 3em;
+}
+
+#map{
+  position: relative;
+  top: 7em;
+
+}
+#map1{
+ width: 57%;
+position: relative;
+top: 1em;
+}
+
+#inf{
+  top: 0.3em;
+  margin: 0em;
+  padding: 0em;
+}
+
+#carouselExampleInterval{
+  width: 22em;
+height: 17em;
+}
+#car{
+  height: 17em; 
+}
+
+#car2{
+  height: 11.67em; 
+}
+
+#carouselExampleCaptions{
+  width: 22em;
+  height: 11.7em;
+}
+footer{
+  font-size: 13px;
+}
+#v-pills-tab .nav-link{
+  padding: .8rem !important;
+}
+/*##########################*/
+/*##########Edic###########*/
 /*Menu General*/
 #navge {
   position: absolute;
-  top: 7em;
-  box-shadow: -12px 2px 13px 1px #191a1a69;
+  top: 0em;
   width: 43em;
   left: 18px;
   margin: 0px;
   padding: 0px;
-}
-#navge:hover {
-  box-shadow: 0px 3px 10px 0px #3291e8;
-  transition: all 0.6s ease-out;
-  -moz-transform : scale(1.02); /* Firefox */
-  -webkit-transform : scale(1.02); /* Chrome - Safari */
-  -o-transform : scale(1.02); /* Opera */
-  -ms-transform : scale(1.02); /* IE9 */
 }
 
 
@@ -95,9 +127,12 @@ font-size: 1.5em;
   margin: 0px;
 padding: 0px;
 }
+#navge #navgea #v-pills-tab ul li {
+margin-top: 5px;
+}
   
 #navge #navgea #v-pills-tab h1{
-  font-size: 23px;
+  font-size: 22px;
 }
 
 #navge #navgea #v-pills-tab button
@@ -121,16 +156,19 @@ padding: 0px;
   visibility: hidden;
   background-color: rgba(252, 252, 252, 0.979);
   position: absolute;
-  width: 33em;
-  left: 21em;
+  width: 38em;
+  left: 21.3em;
   top: 0em;
   padding: 1em;
-  height: 37.3em;
+  height: 40.2em;
+  overflow: auto;
 }
   
 #navge #navgea #v-pills-tab ul li:hover > div{
   visibility: visible;
+  transition: all 0.6s ease-out;
   background-color: rgba(252, 252, 252, 0.979);
+  overflow: auto;
 }
 
 #navge #navgea #v-pills-tab ul li div img{
@@ -147,319 +185,6 @@ padding: 0px;
     height: 37em;
     flex-wrap: wrap;
   }
-/*Carrusel*/
-  #contNavFull{
-    position: absolute;
-    left: 45em;
-    max-width: 25em;
-    top: 7em;
-    padding: 0em;
-    box-shadow: 0px 3px 10px 0px #494969;
-    border-radius: 1em;
-  }
-  #contNavFull:hover{
-    box-shadow: 0px 3px 10px 0px #3291e8;
-    transition: all 0.6s ease-out;
-    -moz-transform : scale(1.03); /* Firefox */
-    -webkit-transform : scale(1.03); /* Chrome - Safari */
-    -o-transform : scale(1.03); /* Opera */
-    -ms-transform : scale(1.03); /* IE9 */
-  }
-  #contNavFull #carImg{
-    border-radius: 1em;
-  }
-  /*Imagen de reclama tus resuktados */
-#TexCita{
-  position: relative;
-  width: 13em;
-  top: 5.5em;
-  left: 71.1em;
-  background-color: #f0f1fb;
-
-  border-radius: 1em;
-  height: 14.1em;
-}
-
-#TexCita img{
-  width: 6em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
-#TexCita #texci{
-  position: absolute;
-  word-wrap: break-word;
-  left: 11px;
-  top: 3em;
-}
-
-#TexCita #texci:hover{
-  transition: all 0.6s ease-out;
-  background-color: #3291e829;
-  box-shadow: 0px 3px 10px 0px #3291e8;
-  transition: all 0.6s ease-out;
-  -moz-transform : scale(1.03); /* Firefox */
-  -webkit-transform : scale(1.03); /* Chrome - Safari */
-  -o-transform : scale(1.03); /* Opera */
-  -ms-transform : scale(1.03); /* IE9 */
-}
-
-
-#TexCita h1{
-  text-align: center;
-font-size: 1em;
-}
-
-.parpadea {
-  animation-name: parpadeo;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  -webkit-animation-name:parpadeo;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-}
-
-@-moz-keyframes parpadeo{  
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
-}
-
-@-webkit-keyframes parpadeo {  
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-   100% { opacity: 1.0; }
-}
-
-@keyframes parpadeo {  
-  0% { opacity: 1.0; }
-   50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
-}
-/*Map*/
-#map{
-  position: relative;
-  width: 13em;
-  height: 14.7em;
-  left: 35em;
-  top: 6.5em;
-  background-color: #f0f1fb;
-  border-radius: 1em;
-}
-#map a #map{
-  left: 2em;
-  top: 4em;
-  width: 7em;
-  height: 7em;
-  box-shadow: 0px 3px 10px 0px #494969;
-}
-#map a #map:hover{
-  transition: all 0.6s ease-out;
-  -moz-transform : scale(2); /* Firefox */
-  -webkit-transform : scale(2); /* Chrome - Safari */
-  -o-transform : scale(2); /* Opera */
-  -ms-transform : scale(2); /* IE9 */
-  background-color: #3291e829;
-  box-shadow: 0px 3px 10px 0px #3291e8;
-
-}
-/*Carrucel del foro*/
-#DatosInf{
-  position: relative;
-  width: 25em;
-  left: 45em;
-  bottom: 8.2em;
-  background-color: #fc0606;
-  margin: 0px;
-  padding: 0px;
-}
-
-#DatosInf #DatInf{
-  position: absolute;
-  padding: 0px;
-  margin: 0px;
-  height: 14.8em;
-  width: 25em;
-  border-radius: 1em;
-  box-shadow: 0px 3px 10px 0px #494969;
-}
-#DatosInf #DatInf:hover{
-  transition: all 0.6s ease-out;
-  box-shadow: 0px 3px 10px 0px #3291e8;
-  border-radius: 1em;
-  -moz-transform : scale(1.03); /* Firefox */
-  -webkit-transform : scale(1.03); /* Chrome - Safari */
-  -o-transform : scale(1.03); /* Opera */
-  -ms-transform : scale(1.03); /* IE9 */
-}
-#DatosInf #DatInf #ForoCrousel{
-padding: 0px;
-margin: 0px;
-}
-#DatosInf #DatInf #ForoCrousel #carouselExampleSlidesOnly .carousel-inner {
-  height: 14.8em;
-  }
-#DatosInf #DatInf #ForoCrousel #carouselExampleSlidesOnly .carousel-inner #datos{
-
-}
-#DatosInf #DatInf #ForoCrousel #carouselExampleSlidesOnly .carousel-inner #datos #carousel-Tittle{
-  position: relative;
-  width: 10em;
-  height: 100%;
-  word-wrap: break-word;
-}
-#DatosInf #DatInf #ForoCrousel #carouselExampleSlidesOnly .carousel-inner #datos #carousel-Tittle h1{
-  width: 100%;
-  height: 62%;
-  font-size: 22px;
-  text-align: center;
-  margin-top: 4em;
-}
-#DatosInf #DatInf #ForoCrousel #carouselExampleSlidesOnly .carousel-inner #datos #carousel-img img {
-  position: absolute;
-  width: 15em;
-  top: -4px;
-  left: 10em;
-  height: 15em;
-  border-radius: 0 1em 1em 0;
-}
-
-#Footer{
-  position: absolute;
-  bottom: 0em;
-  width: 100%;
-}
-
-/*####################*/
-/*TRABAJA CON NOSOTROS*/
-#Trbaje{
-  background-color: #0000dfe8;
-  box-shadow: 0px 3px 10px 0px #3291e8;
-  border-radius: 1em;
-  padding: 18px;
-}
-#Trbaje:hover{
-  background-color: #063d6f;
-  box-shadow: 0px 1px 6px 2px #000000a8;
-  transition: all 0.6s ease-out;
-
-}
-
-/*####################*/
-/*BARRA DE  NAVEGACION*/
-/*####################*/
-/*Menu Infomracion al usuario*/
-#navbar #InfUser  #InfU {
-  display: flex;
-  position: absolute;
-  left: -270%;
-  width: 80.6em;
-  top: calc(100% + 30px);
-  margin: 0;
-  padding: 0px;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  color: #fff !important;
-  transition: 0.3s;
-  background-color: #4e1bffbf;
-  box-shadow: 0px 0px 13px 2px #000000c7;
-  word-wrap: break-word;
-}
-#navbar #InfUser:hover > #InfU  {
-  opacity: 1;
-  top: 100%;
-  visibility: visible;
-}
-
-#navbar #InfUser  #InfU li{ 
-  position: relative;
-  display: block;
-  margin-right: 2%;
-  width: 11em;
-  text-align: center;
-  margin-left: 2%;  
-}
-
-#navbar #InfUser #InfU li a { 
-  display: block;
-  color: rgb(255, 255, 255) ;
-  }
-
-  #navbar #InfUser #InfU li a span{ 
-
- 
-    }
-
-#navbar #InfUser #InfU  li a:hover  { 
-    transition: all 0.5s ease-out;
-    -moz-transform : scale(1.1); /* Firefox */
-    -webkit-transform : scale(1.1); /* Chrome - Safari */
-    -o-transform : scale(1.1); /* Opera */
-    -ms-transform : scale(1.1); /* IE9 */
-    }
-  
-    #navbar #InfUser #InfU li a  img{ 
-      color: rgb(255, 255, 255) ;
-  width: 2.5em;
-  padding-right: 2px;
-      }
-/*####################*/
-    /*Menu Mas*/
-/*####################*/
-#navbar #InfMas #Mas {
-  display: flex;
-  position: absolute;
-  left: -1000%;
-  width: 83.6em;
-  margin: 0;
-  padding: 0px 0;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  color: #fff !important;
-  transition: 0.3s;
-  background-color: #4e1bffbf;
-  box-shadow: 0px 0px 13px 2px #000000c7;
-}
-
-#navbar #InfMas:hover > #Mas  {
-  opacity: 1;
-  top: 100%;
-  visibility: visible;
-}
-
-#navbar #InfMas  #Mas li{ 
-  position: relative;
-  display: block;
-  margin-left: 1%;
-  right: -2%;
-  width: 11em;
-  text-align: center;
-  left: auto;
-  margin-right: 1%;
-  }
-  #navbar #InfMas  #Mas li a { 
-  display: block;
-  color: rgb(255, 255, 255) ;  
-}
-
-#navbar #InfMas  #Mas li a:hover  { 
-  transition: all 0.5s ease-out;
-  -moz-transform : scale(1.2); /* Firefox */
-  -webkit-transform : scale(1.2); /* Chrome - Safari */
-  -o-transform : scale(1.2); /* Opera */
-  -ms-transform : scale(1.2); /* IE9 */
-}
-#navbar #InfMas #Mas li a  img{ 
-  color: rgb(255, 255, 255) ;
-  width: 2.5em;
-  padding-right: 2px;
-}
 /*####################*/
 /*SUbmenude paciente*/
 /*####################*/
@@ -481,3 +206,401 @@ width: 3em;
   -ms-transform : scale(1.1); /* IE9 */
   border-radius:35px;
   }
+
+  #resul {
+    animation-name: parpadeo;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name:parpadeo;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-moz-keyframes parpadeo{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  .btn-group, .btn-group-vertical {
+    background-color: #4e1bffbf;
+    display: ruby;
+  }
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    background-color: #4e1bffbf;
+    display: ruby;
+  }
+/*##########################*/
+/*##########################*/
+/*##########################*/
+/*Resoluciones del valor para aariba*/ 
+/*##########################*/
+/*##########################*/
+/*##########################*/
+/*##########################*/
+/*##########Juan Carlos#############*/
+
+@media (min-width: 2700px) {
+  #Soc {
+  margin: 0em;
+  font-size: 26px;
+}
+.navbar-expand-lg .navbar-nav {
+  font-size: 2em;
+}
+#navge #navgea #v-pills-tab h1 {
+  font-size: 40px;
+}
+  #carouselExampleInterval {
+    width: 42em;
+    height: 40em;
+  }
+  #inf {
+    top: 5em;
+    margin: 0em;
+    padding: 0em;
+  }
+  #car {
+    height: 40em;
+  }
+  #carouselExampleCaptions {
+    width: 42em;
+    height: 35em;
+  }
+  #car2 {
+    width: 42em;
+    height: 35em;
+  }
+footer{
+  font-size: 2em;
+}
+
+#resl{
+  top:5em;
+}
+#res {
+  width: 25em;
+}
+#map {
+  position: relative;
+  top: 10em;
+}
+#map1 {
+  width: 26em;
+  position: relative;
+  top: 0em;
+  left: 14px;
+}
+
+#navge {
+  top: 5em;
+}
+
+#navge #navgea #v-pills-tab ul li div {
+  width: 37em;
+  left: 11.3em;
+  top: 0em;
+  padding: 1em;
+  height: 38.7em;
+  font-size: 2em;
+}
+#navge #navgea #v-pills-tab button {
+  width: 18.5em;
+  color: rgb(255, 255, 255);
+  border-color: #ddd;
+  text-align: left;
+  font-size: larger;
+  height: 10.5em;
+  background-color: #191743;
+}
+.modal-dialog {
+  max-width: 56em;
+  margin: 1.75rem auto;
+  max-height: 33em;
+  font-size: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 2em;
+}
+
+.btn-group, .btn-group-vertical {
+  font-size: 20px;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  font-size: 20px;
+}
+}
+
+@media (max-width:1021px) {
+
+   /*##########################*/
+      /*##########################*/
+      #navge #navgea #v-pills-tab button {
+        width: 10em;
+        color: rgb(255, 255, 255);
+        border-color: #ddd;
+        text-align: left;
+        font-size: 19px;
+        height: 4.8em;
+        background-color: #191743;
+      }
+      #navge #navgea #v-pills-tab ul li div {
+        visibility: hidden;
+        background-color: rgba(252, 252, 252, 0.979);
+        position: absolute;
+        width: 26em;
+        left: 15.1em;
+        top: 0.5em;
+        padding: 1em;
+        height: 44.7em;
+        overflow: auto;
+      }
+   /*##########################*/
+      /*##########################*/
+
+
+#Soc1{
+ flex: 0 0 25%;
+ max-width: 25%;
+ margin-top: 0em !important;
+ }
+
+/*Columna central de imagenes, es la columna*/
+
+#inf{flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  top: 0.3em;}
+
+  #carouselExampleInterval{
+width: 20em;
+left: -2em;
+top: 1em;
+height: 17em;
+}
+#carouselExampleCaptions{
+  width: 20em;
+left: -2em;
+height: 15em;
+}
+#resl{
+  margin: 0em;
+  padding: 0em;
+  left: -1em;
+}
+
+#resul{
+  margin-top: 5em;
+  position: relative;
+top: 0em;
+}
+
+
+#res {
+  width: 104%;
+}
+#map{
+  margin-top: 4em;
+    position: relative;
+    top: 1em;
+    width: 4em;
+}
+
+#map1{
+width: 169%;
+position: relative;
+top: 0em;
+height: 10em;
+}
+
+#car{
+  height: 17em;
+}
+#car2{
+  height: 15em;
+}
+}
+
+
+@media (max-width:992px) {
+  #resl {
+    left: 0em;
+  }
+  #resul{
+    padding: 0em;
+    width: 5em;
+    margin-left: 5px;
+  }
+  #map{
+    margin-left: 0px;
+  }
+  #map1 {
+    width: 137%;
+
+  }
+}
+
+@media (max-width:990px) {
+  body {
+overflow-y: visible;
+  }
+ 
+  #Log img{
+    position: fixed;
+    right: 0em;
+    top: 0em;
+    width: 6em;
+    padding: 0.3em;
+    left: auto;
+    height: 3.5em;
+    background-color: rgb(226, 227, 237);
+  }
+  #Soc1{
+position: absolute;
+display: block;
+  }
+
+  #v-pills-tabContent{
+
+    height: auto;
+
+    }
+
+    .header{
+
+        position: relative;
+        top: 2em;
+    }
+
+    #inf {
+      position: relative;
+      left: 1%;
+    }
+    #resl {
+      position: relative;
+      top: 1em;
+      margin: 0em;
+      left: -1.5em;
+    }
+    #resul {
+      width: auto;
+      left: 8px;
+    }
+
+    #map{
+      position: relative;
+      top: -1em;
+      left: 1.8em;
+      display: block;
+      margin-bottom: 3em;
+    }
+
+    #map1 {
+      width: 163%;
+      left: -1em;
+    }
+    #MenuD{
+      position: absolute;
+top: 4em;
+right: 1em;
+    }
+    #MenuB{
+      width: 6em;
+position: absolute;
+right: 0em;
+top: 8em;
+    }
+    footer{
+display:none;
+        
+    }
+}
+
+@media (max-width:500px) {
+  
+  .row{
+    overflow-x:hidden
+  }
+  
+  #navge {
+    position: absolute;
+    top: 0em;
+    width: auto;
+    left: auto;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  
+  #navge #navgea #v-pills-tab button {
+    height: 4.8em;
+    width: 96%;
+  }
+  #navge #navgea #v-pills-tab ul li div {
+    position: relative;
+    top: 0em;
+    padding: 1em;
+    height: 40.2em;
+    left: 0em;
+    width: 95%;
+    display: none;
+  }
+  #navge #navgea #v-pills-tab ul li:hover > div{
+transition: all 1s ease-out;
+display: block;
+margin-bottom: 1em;
+  }
+  #inf {
+    position: relative;
+    left: 13%;
+    top: 37em;
+    z-index: -2;
+  }
+  #carouselExampleInterval {
+    width: 279%;
+    height: 17em;
+    left: -32%;
+    
+  }
+  #carouselExampleCaptions {
+    width: 279%;
+    height: 15em;
+    left: -32%;
+  }
+  #resl {
+    position: relative;
+    top: 66em;
+    display: block;
+    margin-left: -7em;
+  }
+  #res {
+    width: 74%;
+  }
+  #map1 {
+    width: 19em;
+    left: 3em;
+    position: relative;
+    top: -4em;
+    height: 18em;
+  }
+  .modal.show .modal-dialog {
+    transform: none;
+    width: 25em;
+  }
+}

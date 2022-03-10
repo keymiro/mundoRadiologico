@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
 <link rel="icon" href="http://www.mundoradiologico.com/wp-content/uploads/2017/11/LogoWeb-50x50.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/bbf6ac91e9.js" crossorigin="anonymous"></script>
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 <style>
 .nav-pills-custom .nav-link {
     color: rgb(0, 0, 0);
@@ -67,7 +67,7 @@ body {
 </head>
 <body>
 @include('layouts.navdos')
-<section class="py-5 header">
+<section class=" header">
 <div class="container-fluid">
     @yield('content')
 </div>

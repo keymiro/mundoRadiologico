@@ -8,12 +8,12 @@
       @if($x->category->title=='Fotos')
     @if($r==1)
       <div class="carousel-item active" data-interval="2000">
-        <img src="{{Storage::url($x->url)}}" class="d-block w-100 rounded" alt="...">
+        <img id="car" src="{{Storage::url($x->url)}}" class="d-block w-100 rounded" alt="...">
       </div>
     @endif
       @if($r>1)
       <div class="carousel-item" data-interval="2000">
-        <img src="{{Storage::url($x->url)}}" class="d-block w-100 rounded" alt="...">
+        <img id="car" src="{{Storage::url($x->url)}}" class="d-block w-100 rounded" alt="...">
       </div>
 @endif
 @php

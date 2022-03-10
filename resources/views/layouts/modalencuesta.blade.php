@@ -74,7 +74,6 @@
                     </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary"  data-toggle="modal" data-target="#paciente">Siguiente</button>
               </div>
                 </form>
@@ -93,9 +92,9 @@
           </button>
         </div>
         <div class="modal-body">
-            <a href="" id="MImagPatien"><img src="image/14.png" alt="Resultados"> Resultados Paciente</a> <br>
+            <a href="" id="MImagPatien"><img src="image/14.png"  target="_blank" alt="Resultados"> Resultados Paciente</a> <br>
             <br>
-            <a href="http://181.59.255.131/patientportal/" id="MImagPatien"> <img src="image/15.png" alt="Imagenes"> Imagenes</a>
+            <a href="http://181.59.255.131/patientportal/"  target="_blank" id="MImagPatien"> <img src="image/15.png" alt="Imagenes"> Imagenes</a>
             </br>
              <a href="">Reportes</a>
         </div>
