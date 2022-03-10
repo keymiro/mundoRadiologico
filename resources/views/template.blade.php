@@ -9,17 +9,9 @@
 <link rel="icon" href="http://www.mundoradiologico.com/wp-content/uploads/2017/11/LogoWeb-50x50.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/bbf6ac91e9.js" crossorigin="anonymous"></script>
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-<link href="{{ asset('css/style.css') }}" rel="stylesheet">
-=======
-<<<<<<< Updated upstream
-=======
+
 {{-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> --}}
->>>>>>> Stashed changes
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
 <style>
 .nav-pills-custom .nav-link {
     color: rgb(0, 0, 0);
@@ -135,6 +127,6 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active show";
 }
     </script>
-    
+
 </body>
 </html>
