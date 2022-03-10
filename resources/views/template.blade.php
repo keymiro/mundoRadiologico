@@ -19,7 +19,7 @@
     position: relative;
 }
 /* Add indicator arrow for the active tab */
-@media (min-width: 992px) {
+/* @media (min-width: 992px) { */
     .nav-pills-custom .nav-link::before {
         content: '';
         display: block;
@@ -32,7 +32,7 @@
         transform: translateY(-50%);
         opacity: 0;
     }
-}
+/* } */
 
 .nav-pills-custom .nav-link.active::before {
     opacity: 1;
