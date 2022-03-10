@@ -8,15 +8,18 @@
           <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="accordion" id="accordionPanelsStayOpenExample">
-                                <div class="section-title">
-                                    <h2>Buscador</h2>
-                                </div>
-                                <form action="">
-                                  <div>
-                                  <input type="text" placeholder="Ingresa Palabra Clave">
-                                  <button type="button" class="btn btn-outline-primary">Buscar</button>
+                        <h2 class="text-center my-4">Buscador</h2>
+                                  <div class="card shadow rounded">
+                                      <div class="card-header">
+                                        <form class="form-inline my-2 my-lg-0" method="post" action="{{route('searchAll')}}">
+                                            @csrf
+                                             <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                                          </form>
+                                      </div>
+                                      <div class="card-body">
+                                
                                   </div>
-                                </form>
                     </div>
                 </div>
            </div>

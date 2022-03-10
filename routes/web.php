@@ -32,6 +32,7 @@ Route::get('/PreparacionesDg',[WelcomeController::class,'PrDG'])->name('PrDG');
 Route::get('/Trabaja-Con-Nosotros',[WelcomeController::class,'TrabNos'])->name('TrabNos');
 Route::get('/Datos-De-Interes',[WelcomeController::class,'DatosInt'])->name('DatosInt');
 Route::get('/Buscar',[WelcomeController::class,'search'])->name('search');
+Route::Post('/BuscarTodo',[WelcomeController::class,'searchAll'])->name('searchAll');
 Route::post('/Enviando-Trabaja-Con-Nosotros',[WelcomeController::class,'TrabNosSend'])->name('TrabNosSend');
 Route::post('/Enviando-mensaje-contacto',[WelcomeController::class,'contactoSend'])->name('contactoSend');
 Route::post('/Enviando-mensaje-cita',[WelcomeController::class,'citaSend'])->name('citaSend');

@@ -119,7 +119,22 @@ class WelcomeController extends Controller
         return view('inf')->with(compact('info'));
     }
     public function  search(){
-        $info = information::All();
+        $info = information::all();
         return view('Bus')->with(compact('info'));
+    }
+
+    public function searchAll(Request $request){
+        if (!empty($request->input('search'))) {
+            $info = information::where('title','LIKE','%'.$request->input('search').'%')
+            ->orWhere('description','LIKE','%'.$request->input('search').'%')
+            ->orWhere('descriptionck','LIKE','%'.$request->input('search').'%')
+            ->paginate(10);
+
+            return view('result')->with(compact('info'));
+        }else{
+            $info = information::All();
+            return back()->with(compact('info'));
+        }
+
     }
 }
